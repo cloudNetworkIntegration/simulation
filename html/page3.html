@@ -62,17 +62,13 @@
             z-index: 5;
         }
         .water-circle-small{
-            left:160px;
-            top:105px;
-            width:6px;
-            height: 6px;
-            animation: mySmall 5s;
-            -webkit-animation: mySmall 5s;
+            width:7px;
+            height: 7px;
         }
         .water-circle-normal{
 
-            width:8px;
-            height: 8px;
+            width:9px;
+            height: 9px;
         }
         .water-circle-large{
             width:12px;
@@ -81,133 +77,111 @@
 
         .water-top{
             top:105px;/*最上端*/
-            animation: water-top-animation 3s linear 0s infinite;
+            animation: water-animation-top 3s linear 0s infinite;
         }
 
         .water-high{
-            top:135px;
-            animation: water-top-animation 3s linear 0s infinite;
+            top:145px;
+            animation: water-animation-high 3s linear 0s infinite;
         }
 
         .water-middle{
             top:185px;
-            animation: water-top-animation 3s linear 0s infinite;
+            animation: water-animation-middle 3s linear 0s infinite;
         }
 
         .water-low{
             top:225px;
-            animation: water-top-animation 3s linear 0s infinite;
+            animation: water-animation-low 3s linear 0s infinite;
         }
 
         .water-left{
-            left:300px;/*最右端*/
+            left:305px;/*最右端*/
         }
 
         .water-far{
-            left:180px;
-            animation:water-far-animation 3s linear 0s infinite;
-        //    -webkit-animation: water-far-animation 5s;
-        //    -o-animation: water-far-animation 5s;
+            left:140px;
+            animation:water-animation-far 3s linear 0s infinite;
         }
 
         .water-normal{
-            left:220px;
-            animation:water-normal-animation  3s linear 0s infinite;
-        //    -webkit-animation: water-normal-animation 5s;
-        //    -o-animation: water-normal-animation 5s;
+            left:195px;
+            animation:water-animation-normal  3s linear 0s infinite;
         }
 
         .water-near{
-            left:260px;
-            animation:water-near-animation 3s linear 0s infinite;
-        //     -webkit-animation: water-near-animation 5s;
-        //    -o-animation: water-near-animation 5s;
+            left:250px;
+            animation:water-animation-near 3s linear 0s infinite;
         }
 
-        /*水滴移动*/
-        @keyframes water-far-animation {
-            45%{top:105px;left:300px;}
-            100%{top:245px;left:300px;}
-        }
-        @-webkit-keyframes water-far-animation {
-            45%{top:105px;left:285px;}
-            100%{top:245px;left:285px;}
-        }
-        @-o-keyframes  water-far-animation{
-            45%{top:105px;left:285px;}
-            100%{top:245px;left:285px;}
+        @keyframes water-animation-far {
+            0%{top:105px;left:140px;visibility: visible;}
+            60%{top:105px;left:305px;visibility: visible;}
+            97%{top:255px;left:305px;visibility: visible;}
+            98%{top:255px;left:305px;visibility: hidden;}
+            99%{top:105px;left:140px;visibility: hidden;}
+            100%{top:105px;left:140px;visibility: visible;}
         }
 
-        @keyframes water-normal-animation {
-            30%{top:105px;left:300px;}
-            85%{top:245px;left:300px;}
-            100%{top:245px;left:300px;}
+        @keyframes water-animation-normal {
+            0%{top:105px;left:195px;visibility: visible;}
+            40%{top:105px;left:305px;visibility: visible;}
+            77%{top:255px;left:305px;visibility: visible;}
+            78%{top:255px;left:305px;visibility: hidden;}
+            79%{top:105px;left:140px;visibility: hidden;}
+            80%{top:105px;left:140px;visibility: visible;}
+            100%{top:105px;left:195px;visibility: visible;}
         }
-        @-webkit-keyframes water-normal-animation {
-            30%{top:105px;left:285px;}
-            100%{top:245px;left:285px;}
+
+        @keyframes water-animation-near {
+            0%{top:105px;left:250px;visibility: visible;}
+            20%{top:105px;left:305px;visibility: visible;}
+            57%{top:250px;left:305px;visibility: visible;}
+            58%{top:250px;left:305px;visibility: hidden;}
+            59%{top:105px;left:140px;visibility: hidden;}
+            60%{top:105px;left:140px;visibility: visible;}
+            100%{top:105px;left:250px;visibility: visible;}
         }
-        @-o-keyframes water-normal-animation {
-            30%{top:105px;left:285px;}
-            100%{top:245px;left:285px;}
+
+        @keyframes water-animation-top {
+            0%{top:105px;left:305px;visibility: visible;}
+            36%{top:250px;left:305px;visibility: visible;}
+            37%{top:250px;left:305px;visibility: hidden;}
+            38%{top:105px;left:140px;visibility: hidden;}
+            40%{top:105px;left:140px;visibility: visible;}
+            100%{top:105px;left:305px;visibility: visible;}
         }
-        @keyframes water-near-animation{
-            10%{top:105px;left:300px;}
-            65%{top:245px;left:300px;}
-            100%{top:245px;left:300px;}
+
+        @keyframes water-animation-high {
+            0%{top:145px;left:305px;visibility: visible;}
+            24%{top:250px;left:305px;visibility: visible;}
+            25%{top:250px;left:305px;visibility: hidden;}
+            26%{top:105px;left:140px;visibility: hidden;}
+            27%{top:105px;left:140px;visibility: visible;}
+            87%{top:105px;left:305px;visibility: visible;}
+            100%{top:145px;left:305px;visibility: visible;}
         }
-        @-webkit-keyframes water-near-animation{
-            10%{top:105px;left:280px;}
-            100%{top:245px;left:280px;}
+
+        @keyframes water-animation-middle {
+            0%{top:185px;left:305px;visibility: visible;}
+            12%{top:250px;left:305px;visibility: visible;}
+            13%{top:250px;left:305px;visibility: hidden;}
+            14%{top:105px;left:140px;visibility: hidden;}
+            15%{top:105px;left:140px;visibility: visible;}
+            75%{top:105px;left:305px;visibility: visible;}
+            100%{top:185px;left:305px;visibility: visible;}
         }
-        @-o-keyframes water-near-animation{
-            10%{top:105px;left:280px;}
-            100%{top:245px;left:280px;}
+
+        @keyframes water-animation-low {
+            0%{top:225px;left:305px;visibility: visible;}
+            1%{top:250px;left:305px;visibility: visible;}
+            2%{top:250px;left:305px;visibility: hidden;}
+            3%{top:105px;left:140px;visibility: hidden;}
+            4%{top:105px;left:140px;visibility: visible;}
+            64%{top:105px;left:305px;visibility: visible;}
+            100%{top:225px;left:305px;visibility: visible;}
         }
-        @keyframes water-top-animation {
-            45%{top:245px;left:300px;}
-            100%{top:245px;left:300px;}
-        }
-        @-webkit-keyframes water-far-animation {
-            100%{top:245px;left:300px;}
-        }
-        @-o-keyframes  water-far-animation{
-            10%{top:245px;left:300px;}
-            10%{top:245px;left:300px;}
-        }
-        @keyframes water-high-animation {
-            45%{top:245px;left:300px;}
-            100%{top:245px;left:300px;}
-        }
-        @-webkit-keyframes water-far-animation {
-            100%{top:245px;left:300px;}
-        }
-        @-o-keyframes  water-far-animation{
-            10%{top:245px;left:300px;}
-            10%{top:245px;left:300px;}
-        }
-        @keyframes water-middle-animation {
-            20%{top:245px;left:300px;}
-            100%{top:245px;left:300px;}
-        }
-        @-webkit-keyframes water-far-animation {
-            100%{top:245px;left:300px;}
-        }
-        @-o-keyframes  water-far-animation{
-            10%{top:245px;left:300px;}
-            10%{top:245px;left:300px;}
-        }
-        @keyframes water-low-animation {
-            10%{top:245px;left:300px;}
-            100%{top:245px;left:300px;}
-        }
-        @-webkit-keyframes water-far-animation {
-            100%{top:245px;left:300px;}
-        }
-        @-o-keyframes  water-far-animation{
-            10%{top:245px;left:300px;}
-            10%{top:245px;left:300px;}
-        }
+
     </style>
     
 </head>
@@ -216,7 +190,7 @@
 
     <div id="wrapper">
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top my-navbar" role="navigation"">
+        <nav class="navbar navbar-default navbar-static-top my-navbar" role="navigation">
             <div class="navbar-header">
                 <img class="my-navbar-logo my-navbar-logo" src="img/headerLogo.png"/>
                 <a class="navbar-brand my-navbar-title" href="page1.html">猎犬云网融合仿真环境门户</a>
@@ -266,9 +240,9 @@
                     </div>
                     <div class="water-circle water-circle-small water-high water-left">
                     </div>
-                    <div class="water-circle water-circle-normal water-middle water-left">
+                    <div class="water-circle water-circle-large water-middle water-left">
                     </div>
-                    <div class="water-circle water-circle-large water-low water-left">
+                    <div class="water-circle water-circle-small water-low water-left">
                     </div>
                     <div class="water-background water-background-top">
                     </div>
@@ -316,16 +290,16 @@
 
 
             //动态获取
-        let canvas = $("canvas");
-        let ctx = canvas[0].getContext('2d');
-      //  let radians = (Math.PI / 180) * 180;
-        let startTime = Date.now();
-        let time = 2000;
-        let clockwise = 1;
-        let cp1x, cp1y, cp2x, cp2y;
+        var canvas = $("canvas");
+        var ctx = canvas[0].getContext('2d');
+      //  var radians = (Math.PI / 180) * 180;
+        var startTime = Date.now();
+        var time = 2000;
+        var clockwise = 1;
+        var cp1x, cp1y, cp2x, cp2y;
         
         requestAnimationFrame(function waveDraw() {  
-            let t = Math.min(1.0, (Date.now() - startTime) / time);
+            var t = Math.min(1.0, (Date.now() - startTime) / time);
               
             if(clockwise) {
                 cp1x = 121 + (74 * t);

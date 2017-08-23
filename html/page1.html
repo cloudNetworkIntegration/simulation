@@ -32,31 +32,115 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
-        .bgtu {
-            display: block;
-            width: 100%;
-            height: 100%;
+
+        @media screen and (min-width : 1905px){
+            .my-image{
+                display: inline-block;
+                float: left;
+                margin-right: 20px;
+            }
+
+            .my-info{
+                width:400px;
+                float: right;
+                display: inline-block;
+            }
+
+            .bgtu {
+                display: block;
+                width: 1161px;
+                height: 826px;
+            }
+
+            .bghover {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                display: none;
+                width: 1161px;
+                height: 826px;
+            }
+
+            .map-large{
+                display: block;
+            }
+
+            .map-small{
+                display: none;
+            }
         }
 
-        .bghover {
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            display: none;
-            width: 813px;
-            height: 714px;
+        @media screen and (max-device-width:1905px){
+
+            .my-image{
+                display: inline-block;
+                float: left;
+                margin-right: 10px;
+            }
+
+            .my-info{
+                width:370px;
+                float: right;
+                display: inline-block;
+            }
+
+            .bgtu {
+                display: block;
+                width: 645px;
+                height: 459px;
+            }
+
+            .bghover {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                display: none;
+                width: 645px;
+                height: 459px;
+            }
+
+            .map-large{
+                display: none;
+            }
+
+            .map-small{
+                display: block;
+            }
         }
 
         .hover {
             display: block;
         }
 
+        .my-panel{
+            margin-bottom: 10px;
+        }
+
+        .my-panel-logo{
+            width:20px;
+            height:20px;
+        }
 
         .my-panel-title{
             font-family: '微软雅黑 Bold', '微软雅黑';
             font-weight: 700;
             font-style: normal;
             font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .my-panel-body{
+            padding-top:0;
+            padding-bottom: 0;
+        }
+
+        .my-link{
+            float:right;
+            cursor: pointer;
+        }
+
+        .my-link:hover{
+            text-decoration: none;
         }
     </style>
 
@@ -67,7 +151,7 @@
 <div id="wrapper">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top my-navbar" role="navigation" style="width:1920px;">
+    <nav class="navbar navbar-default navbar-static-top my-navbar" role="navigation" >
         <div class="navbar-header">
             <img class="my-navbar-logo my-navbar-logo" src="img/headerLogo.png"/>
             <a class="navbar-brand my-navbar-title" href="page1.html">猎犬云网融合仿真环境门户</a>
@@ -98,37 +182,39 @@
     </nav>
 
     <!-- Page Content -->
-    <div id="page-wrapper" style="padding-left: 10px;width:1720px;">
+    <div id="page-wrapper" class="my-page-wapper">
         <div class="container-fluid">
-            <h2 class="page-header my-page-header" style="width: 1650px; height: 50px;">系统概览</h2>
+            <h2 class="page-header my-page-header">系统概览</h2>
             <!--图片-->
-            <div style="width:1100px;display: inline-block;float: left;margin-right: 15px;">
+            <div class="my-image">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <img src="img/page1/architecture.png" style="width:20px;height:20px;" />
+                        <img src="img/page1/architecture.png"  class="my-panel-logo" />
                         整体架构示意图
                     </div>
                     <div class="panel-body" style="position:relative;">
-                        <img class="bgtu" src="img/page1/u81.png" usemap="#Map"
+                        <img class="bgtu" src="img/page1/platform.png" usemap="#MapSmall"
                              border="0"/>
-                        <img class="bghover" src="img/page1/TB1dDhXLpXXXXacaXXXXXXXXXXX-1626-1428.png" usemap="#Map"
+                        <img class="bghover" src="img/page1/lancun_highlight.png" usemap="#MapSmall"
                              border="0"/>
-                        <img class="bghover" src="img/page1/TB1klNiLpXXXXXjXVXXXXXXXXXX-1626-1428.png" usemap="#Map"
+                        <img class="bghover" src="img/page1/datasource_highlight.png" usemap="#MapSmall"
                              border="0"/>
-                        <img class="bghover" src="img/page1/TB1VkU.LXXXXXa7aXXXXXXXXXXX-1626-1428.png" usemap="#Map"
+                        <img class="bghover" src="img/page1/daho_highlight.png" usemap="#MapSmall"
                              border="0"/>
-                        <map name="Map" id="Map">
-                            <!--<area class="hov" shape="poly" coords="530,639,586,673,772,560,772,526,715,491,531,601"
+                        <map name="MapLarge" id="MapLarge" class="map-large">
+                            <area class="hov" shape="poly" coords="97.2,230.85,352.08,82.62,457.38,156.33,202.23,304.02"
                                   href="javascript:;"/>
-                            <area class="hov" shape="poly" coords="314,679,726,433,726,325,429,147,27,386,28,510"
+                            <area class="hov" shape="poly" coords="685.8,167.67,685.8,146.88,757.35,105.84,947.16,240.3,947.16,259.47,883.17,303.75"
                                   href="javascript:;"/>
-                            <area class="hov" shape="poly" coords="353,140,353,105,298,72,39,224,38,271,85,299"
-                                  href="javascript:;"/>-->
-                            <area class="hov" shape="poly" coords="530,639,586,673,772,560,772,526,715,491,531,601"
+                            <area class="hov" shape="poly" coords="256.23,278.91,427.14,179.28,467.91,210.06,297.27,313.47"
                                   href="javascript:;"/>
-                            <area class="hov" shape="poly" coords="314,679,726,433,726,325,429,147,27,386,28,510"
+                        </map>
+                        <map name="MapSmall" id="MapSmall" class="map-small">
+                            <area class="hov" shape="poly" coords="54,128.25,195.6,45.9,254.1,86.85,112.35,168.9"
                                   href="javascript:;"/>
-                            <area class="hov" shape="poly" coords="353,140,353,105,298,72,39,224,38,271,85,299"
+                            <area class="hov" shape="poly" coords="381,93.15,381,81.6,420.75,58.8,526.2,133.5,526.2,144.15,490.65,168.75"
+                                  href="javascript:;"/>
+                            <area class="hov" shape="poly" coords="142.35,154.95,237.3,99.6,259.95,116.7,165.15,174.15"
                                   href="javascript:;"/>
                         </map>
                     </div>
@@ -136,18 +222,18 @@
             </div>
 
             <!--提示信息-->
-            <div style="width:530px;display: inline-block;">
-                <div class="panel panel-default">
+            <div class="my-info">
+                <div class="panel panel-default my-panel">
                     <div class="panel-heading">
-                        <img src="img/page1/introduction.png" style="width:20px;height:20px;">
+                        <img src="img/page1/introduction.png" class="my-panel-logo">
                         系统介绍
                     </div>
-                    <div class="panel-body">
-                        <h3 class="my-panel-title">猎犬智能视频筛查</h3>
+                    <div class="panel-body my-panel-body">
+                        <h4 class="my-panel-title">猎犬智能视频筛查</h4>
                         <p>
                             &nbsp;&nbsp;&nbsp;&nbsp;“猎犬”产品融合Wi-Fi探针的和视频监控的多源数据，基于轨迹分析、计算机视觉、机器学习、人工智能等算法和技术，构建目标人员图像视频信息与移动设备ID信息的时空关联关系，打造区域内的人员立体探测与智能关联分析网，帮助政府、学校、社区等进行更高效的人员管理、异常预警、目标筛查和轨迹追踪，满足新型智慧城市的综合治理需求。
                         </p>
-                        <h3 class="my-panel-title">云网融合仿真环境</h3>
+                        <h4 class="my-panel-title">云网融合仿真环境</h4>
                         <p>
                             &nbsp;&nbsp;&nbsp;&nbsp;基于电信云网资源优势和云网融合技术，可在猎犬核心业务平台及蓝存对象存储之间搭建可软件定义带宽通道，日间平峰期间仅配置小带宽以满足结构化数据同步需求，夜间备份期间以及备份数据调取期间则随时开启大带宽以满足非结构化视频数据传输需求。
                         </p>
@@ -155,14 +241,16 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <img src="img/page1/characteristic.png" style="width:20px;height:20px;">
+                        <img src="img/page1/characteristic.png" class="my-panel-logo">
                         模块特性
                     </div>
-                    <div class="panel-body">
-                        <h3 class="my-panel-title info-heading">数据采集端</h3>
+                    <div class="panel-body my-panel-body">
+                        <h4 class="my-panel-title info-heading">数据采集端</h4>
                         <p class="info-message">- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。<br/>
-                            - 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。
+                            - 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。<br/>
+                            <a class="my-link">了解更多>></a>
                         </p>
+
                     </div>
                 </div>
             </div>
@@ -197,30 +285,47 @@
 
     //显示的文字
     var Info = [{
-        title:'test1',
-        message:'测试一测试一测试一测试一测试一测试一测试一测试一测试一测试一测试一测试一'
+        title:'数据采集端',
+        message:'- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。<br/>\n' +
+        '- 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。<br/>\n'+'<a class="my-link">了解更多>></a>',
     },{
-        title:'test2',
-        message:'测试二测试二测试二测试二测试二测试二测试二测试二测试二测试二测试二测试二'
+        title:'蓝存',
+        message:'- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。<br/>\n' +
+        '- 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。<br/>\n'+'<a class="my-link">了解更多>></a>'
     },{
-        title:'test3',
-        message:'测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三测试三'
+        title:'云网融合',
+        message:'- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。<br/>\n' +
+        '- 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。<br/>\n'+'<a class="my-link">了解更多>></a>'
     }]
 
-    $('#Map .hov').each(function(item){
+    //窗口大小发生改变
+    $(window).resize(function(){
+        var doc_width = document.body.clientWidth;
+        if(doc_width>1900){
+            $('.bgtu').attr('usemap','#MapLarge');
+            $('.bghover').each(function(){$(this).attr('usemap','#MapLarge');})
+        }
+        else{
+            $('.bgtu').attr('usemap','#MapSmall')
+            $('.bghover').each(function(){$(this).attr('usemap','#MapSmall');})
+        }
+    });
+
+    $('.hov').each(function(item){
+        var index = item%3;
         //鼠标放上，显示图片
         $(this).mouseover(function(){
             $('.bghover').each(function(){
                 $(this).removeClass('hover');
             });
-            $('.bghover'+':eq('+item+')').addClass('hover');
+            $('.bghover'+':eq('+index+')').addClass('hover');
         });
 
         //鼠标点击，更换右侧文字
         $(this).click(function(){
-            $('.info-heading').text(Info[item].title);
-            $('.info-message').text(Info[item].message);
-        })
+            $('.info-heading').html(Info[index].title);
+            $('.info-message').html(Info[index].message);
+        });
     });
 
 </script>
