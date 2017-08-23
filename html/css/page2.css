@@ -1,0 +1,26 @@
+#express a {
+    text-decoration: none;
+    color: #333;
+}
+
+#demo {
+    overflow: hidden; /*溢出的部分不显示*/
+    width: 290px;
+    height: 200px; /*一定要确切，避免demo1与demo2之间的距离过大*/
+    margin: 50px auto;
+}
+
+#express {
+    position: relative;
+    padding: 0;
+    text-align: center;
+}
+
+#express li {
+    list-style: none;
+    height: 40px;
+    margin: 0 5px;
+    line-height: 180%; /*行与行之间的距离*/
+    letter-spacing: 2px; /*字与字之间的距离*/
+    cursor: pointer;
+}

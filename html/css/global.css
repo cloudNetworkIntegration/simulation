@@ -1,0 +1,54 @@
+    .my-navbar{
+        margin-bottom: 0;
+        background-color: rgba(40, 143, 207, 1);
+    }
+
+    .my-navbar-logo{
+        height:40px;
+        display: inline-block;
+        float: left;
+        margin:10px 0px 0 20px;
+    }
+
+    .my-navbar-title{
+        height:60px;
+        color:white !important;
+        line-height:32px;
+        padding-left: 0;
+    }
+
+    .my-sidebar-menu li,
+    .my-sidebar-menu li a{
+        height:50px;
+    }
+
+    .my-sidebar-menu li a{
+        padding-left:20px;
+        vertical-align: center;
+        color: black;
+    }
+
+    .my-sidebar-menu li img{
+        width:30px;
+        height: 30px;
+        display: inline-block;
+        margin-right:30px;
+    }
+
+    .my-page-header{
+        margin-top:20px;
+    }
+
+    .my-footer{
+        margin-bottom:0;
+    }
+
+    .my-footer-logo{
+        width:80px;
+        height:24px;
+        display: inline-block;
+    }
+
+    .my-footer-title{
+        line-height: 50px;
+    }
