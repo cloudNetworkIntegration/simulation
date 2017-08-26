@@ -36,49 +36,152 @@
     <![endif]-->
 
     <style type="text/css">
-    .lc_background{
-        margin:5% 20%;
-        height:300px;
-        background-color: #ddd;
-    }
+        .lc_background{
+            margin:5% 20%;
+            height:300px;
+            background-color: #ddd;
+        }
 
-    .water-background{
-        position: absolute;
-        top:100px;
-        left:140px;
-        width:150px;
-        height: 20px;
-        background-color: #fff;
+        .water-background{
+            position: absolute;
+            top:100px;
+            left:140px;
+            width:150px;
+            height: 20px;
+            background-color: #fff;
 
-    }
+        }
 
-    .water-circle{
-        position: absolute;
-        background-color: #3cf;
-        border-radius: 50%;
-        -webkit-border-radius:50%;
-        -moz-border-radius:50%;
-        -o-border-radius:50%;
-        z-index: 5;
-    }
-    .water-circle-small{
-        left:160px;
-        top:105px;
-        width:5px;
-        height: 5px;
-    }
-    .water-circle-normal{
-        left:185px;
-        top:110px;
-        width:8px;
-        height: 8px;
-    }
-    .water-circle-large{
-        left:170px;
-        top:100px;
-        width:12px;
-        height: 12px;
-    }
+        .water-circle{
+            position: absolute;
+            background-color: #3cf;
+            border-radius: 50%;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            -o-border-radius:50%;
+            z-index: 5;
+        }
+        .water-circle-small{
+            width:7px;
+            height: 7px;
+        }
+        .water-circle-normal{
+
+            width:9px;
+            height: 9px;
+        }
+        .water-circle-large{
+            width:12px;
+            height: 12px;
+        }
+
+        .water-top{
+            top:105px;/*最上端*/
+            animation: water-animation-top 3s linear 0s infinite;
+        }
+
+        .water-high{
+            top:145px;
+            animation: water-animation-high 3s linear 0s infinite;
+        }
+
+        .water-middle{
+            top:185px;
+            animation: water-animation-middle 3s linear 0s infinite;
+        }
+
+        .water-low{
+            top:225px;
+            animation: water-animation-low 3s linear 0s infinite;
+        }
+
+        .water-left{
+            left:305px;/*最右端*/
+        }
+
+        .water-far{
+            left:140px;
+            animation:water-animation-far 3s linear 0s infinite;
+        }
+
+        .water-normal{
+            left:195px;
+            animation:water-animation-normal  3s linear 0s infinite;
+        }
+
+        .water-near{
+            left:250px;
+            animation:water-animation-near 3s linear 0s infinite;
+        }
+
+        @keyframes water-animation-far {
+            0%{top:105px;left:140px;visibility: visible;}
+            60%{top:105px;left:305px;visibility: visible;}
+            97%{top:255px;left:305px;visibility: visible;}
+            98%{top:255px;left:305px;visibility: hidden;}
+            99%{top:105px;left:140px;visibility: hidden;}
+            100%{top:105px;left:140px;visibility: visible;}
+        }
+
+        @keyframes water-animation-normal {
+            0%{top:105px;left:195px;visibility: visible;}
+            40%{top:105px;left:305px;visibility: visible;}
+            77%{top:255px;left:305px;visibility: visible;}
+            78%{top:255px;left:305px;visibility: hidden;}
+            79%{top:105px;left:140px;visibility: hidden;}
+            80%{top:105px;left:140px;visibility: visible;}
+            100%{top:105px;left:195px;visibility: visible;}
+        }
+
+        @keyframes water-animation-near {
+            0%{top:105px;left:250px;visibility: visible;}
+            20%{top:105px;left:305px;visibility: visible;}
+            57%{top:250px;left:305px;visibility: visible;}
+            58%{top:250px;left:305px;visibility: hidden;}
+            59%{top:105px;left:140px;visibility: hidden;}
+            60%{top:105px;left:140px;visibility: visible;}
+            100%{top:105px;left:250px;visibility: visible;}
+        }
+
+        @keyframes water-animation-top {
+            0%{top:105px;left:305px;visibility: visible;}
+            36%{top:250px;left:305px;visibility: visible;}
+            37%{top:250px;left:305px;visibility: hidden;}
+            38%{top:105px;left:140px;visibility: hidden;}
+            40%{top:105px;left:140px;visibility: visible;}
+            100%{top:105px;left:305px;visibility: visible;}
+        }
+
+        @keyframes water-animation-high {
+            0%{top:145px;left:305px;visibility: visible;}
+            24%{top:250px;left:305px;visibility: visible;}
+            25%{top:250px;left:305px;visibility: hidden;}
+            26%{top:105px;left:140px;visibility: hidden;}
+            27%{top:105px;left:140px;visibility: visible;}
+            87%{top:105px;left:305px;visibility: visible;}
+            100%{top:145px;left:305px;visibility: visible;}
+        }
+
+        @keyframes water-animation-middle {
+            0%{top:185px;left:305px;visibility: visible;}
+            12%{top:250px;left:305px;visibility: visible;}
+            13%{top:250px;left:305px;visibility: hidden;}
+            14%{top:105px;left:140px;visibility: hidden;}
+            15%{top:105px;left:140px;visibility: visible;}
+            75%{top:105px;left:305px;visibility: visible;}
+            100%{top:185px;left:305px;visibility: visible;}
+        }
+
+        @keyframes water-animation-low {
+            0%{top:225px;left:305px;visibility: visible;}
+            1%{top:250px;left:305px;visibility: visible;}
+            2%{top:250px;left:305px;visibility: hidden;}
+            3%{top:105px;left:140px;visibility: hidden;}
+            4%{top:105px;left:140px;visibility: visible;}
+            64%{top:105px;left:305px;visibility: visible;}
+            100%{top:225px;left:305px;visibility: visible;}
+        }
+
     </style>
     
 </head>
@@ -87,227 +190,12 @@
 
     <div id="wrapper">
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top my-navbar" role="navigation"">
+        <nav class="navbar navbar-default navbar-static-top my-navbar" role="navigation">
             <div class="navbar-header">
-               <!--  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                   <span class="sr-only">Toggle navigation</span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-               </button> -->
                 <img class="my-navbar-logo my-navbar-logo" src="img/headerLogo.png"/>
                 <a class="navbar-brand my-navbar-title" href="page1.html">猎犬云网融合仿真环境门户</a>
             </div>
             <!-- /.navbar-header -->
-
-            <!-- <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    /.dropdown-messages
-                </li>
-                /.dropdown
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="sr-only">20% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    /.dropdown-tasks
-                </li>
-                /.dropdown
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    /.dropdown-alerts
-                </li>
-                /.dropdown
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    /.dropdown-user
-                </li>
-                /.dropdown
-            </ul> -->
             <!-- /.navbar-top-links -->
 
             <div class="navbar-default sidebar" role="navigation" >
@@ -342,11 +230,19 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-7"  style="padding:0px;">
-                    <div class="water-circle water-circle-small">
+                    <div class="water-circle water-circle-large water-top water-far">
                     </div>
-                    <div class="water-circle water-circle-normal">
+                    <div class="water-circle water-circle-small water-top water-normal">
                     </div>
-                    <div class="water-circle water-circle-large">
+                    <div class="water-circle water-circle-normal water-top water-near">
+                    </div>
+                    <div class="water-circle water-circle-large water-top water-left">
+                    </div>
+                    <div class="water-circle water-circle-small water-high water-left">
+                    </div>
+                    <div class="water-circle water-circle-large water-middle water-left">
+                    </div>
+                    <div class="water-circle water-circle-small water-low water-left">
                     </div>
                     <div class="water-background water-background-top">
                     </div>
@@ -394,16 +290,16 @@
 
 
             //动态获取
-        let canvas = $("canvas");
-        let ctx = canvas[0].getContext('2d');
-      //  let radians = (Math.PI / 180) * 180;
-        let startTime = Date.now();
-        let time = 2000;
-        let clockwise = 1;
-        let cp1x, cp1y, cp2x, cp2y;
+        var canvas = $("canvas");
+        var ctx = canvas[0].getContext('2d');
+      //  var radians = (Math.PI / 180) * 180;
+        var startTime = Date.now();
+        var time = 2000;
+        var clockwise = 1;
+        var cp1x, cp1y, cp2x, cp2y;
         
         requestAnimationFrame(function waveDraw() {  
-            let t = Math.min(1.0, (Date.now() - startTime) / time);
+            var t = Math.min(1.0, (Date.now() - startTime) / time);
               
             if(clockwise) {
                 cp1x = 121 + (74 * t);
