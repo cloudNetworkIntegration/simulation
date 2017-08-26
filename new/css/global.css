@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 14px;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-bar {
+    position: relative;
+}
+
+.nav-bar-header {
+    width: 1920px;
+}
+
+.nav-bar-logo {
+    height: 40px;
+    display: inline-block;
+    float: left;
+    margin: 10px 0 0 20px;
+}
+
+.nav-bar-title {
+    height: 60px;
+    background-color: rgb(40, 143, 207);
+}
+
+.nav-bar-title > a {
+    margin: 15px;
+    font-size: 18px;
+    line-height: 32px;
+    color: white;
+    float: left;
+}
+
+.nav-bar-aside {
+    position: absolute;
+    width: 200px;
+    border: 1px solid #e7e7e7;
+    border-top: 0;
+}
+
+.nav-bar-aside-list {
+    height: 900px;
+    background-color: #f8f8f8;
+}
+
+.nav-bar-aside-list > li {
+    height: 50px;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    display: block;
+}
+
+.nav-bar-aside-list > li.active {
+    background: #eee;
+}
+
+.nav-bar-aside-list > li a {
+    margin-top: 20px;
+    display: inline-block;
+    position: absolute;
+    font-size: 12px;
+    left: 70px;
+    color: #333;
+}
+
+.aside-logo {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    left: 20px;
+    position: absolute;
+}
+
+.aside-profile {
+    background: url("../img/aside-logo.png") no-repeat 0 0;
+}
+
+.aside-collection {
+    background: url("../img/aside-logo.png") no-repeat 0 -30px;
+}
+
+.aside-storage {
+    background: url("../img/aside-logo.png") no-repeat 0 -60px;
+}
+
+.aside-network {
+    background: url("../img/aside-logo.png") no-repeat 0 -90px;
+}
+
+.main {
+    height: 900px;
+    width: 1670px;
+    position: absolute;
+    left: 220px;
+    padding-left: 20px;
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+.main-title {
+    margin: 20px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.main-title > h1 {
+    font-size: 27px;
+    line-height: 27px;
+}
+
+.panel {
+    display: inline-block;
+    border-radius: 10px; /*设计图上4px 但效果不明显*/
+    border: 1px solid #e7e7e7;
+    background-color: #fbfbfb;
+    position: relative;
+}
+
+.main-logo {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+}
+
+.main-exhibition-title {
+    height: 39px;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f5f5f5;
+    border-radius: 10px 10px 0 0;
+}
+.main-exhibition-title > p {
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 10px;
+}
+
+.footer {
+    top: 960px;
+    position: absolute;
+    margin-top: 15px;
+    height: 40px;
+    width: 1920px;
+    background-color: #f8f8f8;
+    text-align: center;
+    border: 1px solid #eee;
+    border-top: 0;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin: 10px 0;
+    height: 20px;
+    width: 65px;
+}
+
+.footer-title {
+    display: inline-block;
+}
+
+.footer-title > a {
+    margin-bottom: 14px;
+    float: left;
+}
+
+@media (max-width: 1900px) {
+    a {
+        font-size: 8px;
+        line-height: 8px;
+    }
+
+    p {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .nav-bar-header {
+        width: 1366px;
+    }
+
+    .nav-bar-logo {
+        height: 28px;
+        margin: 7px 0 0 14px;
+    }
+
+    .nav-bar-title {
+        height: 42px;
+    }
+
+    .nav-bar-title > a {
+        margin: 11px;
+        font-size: 13px;
+        line-height: 23px;
+    }
+
+    .nav-bar-aside {
+        width: 142px;
+    }
+
+    .nav-bar-aside-list {
+        height: 640px;
+    }
+
+    .nav-bar-aside-list > li {
+        height: 35px;
+    }
+
+    .nav-bar-aside-list > li a {
+        margin-top: 14px;
+        font-size: 8px;
+        left: 50px;
+    }
+
+    .aside-logo {
+        width: 21px;
+        height: 21px;
+        margin-top: 7px;
+        left: 14px;
+    }
+    .aside-profile {
+        background: url("../img/aside-logo-min.png") no-repeat 0 0;
+    }
+
+    .aside-collection {
+        background: url("../img/aside-logo-min.png") no-repeat 0 -21px;
+    }
+
+    .aside-storage {
+        background: url("../img/aside-logo-min.png") no-repeat 0 -42px;
+    }
+
+    .aside-network {
+        background: url("../img/aside-logo-min.png") no-repeat 0 -63px;
+    }
+
+    .main {
+        height: 640px;
+        width: 1188px;
+        left: 156px;
+        padding-left: 14px;
+    }
+
+    .main-title {
+        margin: 14px 0 14px;
+        padding-bottom: 7px;
+    }
+
+    .main-title > h1 {
+        font-size: 19px;
+        line-height: 19px;
+    }
+
+    .panel {
+        border-radius: 7px; /*设计图上4px 但效果不明显*/
+    }
+
+    .main-logo {
+        width: 16px;
+        height: 16px;
+        margin: 7px 0 0 7px;
+    }
+
+    .main-exhibition-title {
+        height: 28px;
+        width: 100%;
+        border-radius: 7px 7px 0 0;
+    }
+    .main-exhibition-title > p {
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 7px;
+    }
+
+    .footer {
+        top: 683px;
+        margin-top: 11px;
+        height: 28px;
+        width: 1366px;
+    }
+
+    .footer-logo {
+        margin: 7px 0;
+        height: 14px;
+        width: 46px;
+    }
+
+    .footer-title > a {
+        margin-bottom: 10px;
+    }
+}

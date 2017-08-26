@@ -1,0 +1,170 @@
+
+.main-monitor {
+    width: 810px;
+    height: 820px;
+    background: url("../img/collection/monitorBG.png") no-repeat 0 0;
+    position: relative;
+    float: left;
+}
+
+.monitor-title {
+    background: none;
+}
+
+.monitor-logo {
+    width: 30px;
+    height: 30px;
+    background: url("../img/collection/monitorLogo.png") no-repeat 1px -4px;
+    background-size: 30px 30px;
+}
+
+.monitor-title > p {
+    color: #fff;
+}
+
+.main-monitor-content {
+    width: 760px;
+    height: 650px;
+    margin: 25px 25px 0;
+}
+
+.monitor-content-title {
+    height: 14px;
+}
+
+.monitor-content-title > p:first-child {
+    float: left;
+    color: #fff;
+}
+
+.monitor-content-title > p:last-child {
+    float: right;
+    color: #278dcc;
+}
+
+.main-monitor-video {
+    width: 760px;
+    height: 570px;
+    background-color: gray;
+    margin-top: 68px;
+}
+
+.main-wifi {
+    width: 810px;
+    height: 820px;
+    background: url("../img/collection/WIFI_BG.png") no-repeat 0 0;
+    position: relative;
+    float: right;
+}
+
+.wifi-title {
+    background: none;
+}
+
+.wifi-logo {
+    width: 20px;
+    height: 20px;
+    background: url("../img/collection/WIFI_Logo.png") no-repeat 0 0;
+    background-size: 20px 20px;
+}
+
+.wifi-title > p {
+    color: #fff;
+}
+
+.main-wifi-content {
+    width: 760px;
+    height: 650px;
+    margin: 25px 25px 0;
+}
+
+.wifi-content-title {
+    height: 14px;
+}
+
+.wifi-content-title > p:first-child {
+    float: left;
+    color: #fff;
+}
+
+.wifi-content-title > p:last-child {
+    float: right;
+    color: #f6ab02;
+}
+
+.main-wifi-data {
+    position: relative;
+    margin: 80px auto 0;
+    width: 470px;
+    height: 250px;
+    overflow: hidden;
+}
+
+#wifi-data {
+    position: relative;
+}
+
+#wifi-data > li {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+@media (max-width: 1900px) {
+    .main-monitor {
+        width: 576px;
+        height: 583px;
+    }
+
+    .monitor-logo {
+        width: 21px;
+        height: 21px;
+        background-size: 21px 21px;
+    }
+
+    .main-monitor-content {
+        width: 540px;
+        height: 462px;
+        margin: 18px 18px 0;
+    }
+
+    .monitor-content-title {
+        height: 10px;
+    }
+
+    .main-monitor-video {
+        width: 540px;
+        height: 405px;
+        margin-top: 48px;
+    }
+
+    .main-wifi {
+        width: 576px;
+        height: 583px;
+    }
+
+    .wifi-logo {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+
+    .main-wifi-content {
+        width: 541px;
+        height: 562px;
+        margin: 18px 18px 0;
+    }
+
+    .wifi-content-title {
+        height: 10px;
+    }
+
+    .main-wifi-data {
+        margin: 57px auto 0;
+        width: 334px;
+        height: 178px;
+    }
+    #wifi-data > li {
+        height: 35px;
+    }
+}
