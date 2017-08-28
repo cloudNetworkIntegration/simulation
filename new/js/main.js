@@ -1,5 +1,5 @@
 $(function () {
-    $('#pageSelect').tabify({num: 1});
+    $('#pageSelect').tabify({num: 0});
     $('#Map .hov').each(function (item) {
         //鼠标放上，显示图片
         $(this).mouseover(function () {

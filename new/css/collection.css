@@ -109,8 +109,7 @@
     height: 50px;
     text-align: center;
 }
-
-@media (max-width: 1900px) {
+@media (max-width: 1366px) {
     .main-monitor {
         width: 576px;
         height: 583px;

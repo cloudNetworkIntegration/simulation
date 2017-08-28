@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 a {
     text-decoration: none;
     color: #333;
@@ -22,26 +27,28 @@ ul {
 
 .nav-bar {
     position: relative;
+    height: 5.5%;
 }
 
 .nav-bar-header {
-    width: 1920px;
+    width: 100%;
+    height: 100%;
 }
 
 .nav-bar-logo {
-    height: 40px;
+    height: 66.7%;
     display: inline-block;
     float: left;
-    margin: 10px 0 0 20px;
+   margin: .5% 0 0 .7%;
 }
 
 .nav-bar-title {
-    height: 60px;
+    height: 100%;
     background-color: rgb(40, 143, 207);
 }
 
 .nav-bar-title > a {
-    margin: 15px;
+    margin: .8%;
     font-size: 18px;
     line-height: 32px;
     color: white;
@@ -50,18 +57,19 @@ ul {
 
 .nav-bar-aside {
     position: absolute;
-    width: 200px;
+    width: 10.4%;
+	height: 86.3%;
     border: 1px solid #e7e7e7;
     border-top: 0;
 }
 
 .nav-bar-aside-list {
-    height: 900px;
+    height: 100%;
     background-color: #f8f8f8;
 }
 
 .nav-bar-aside-list > li {
-    height: 50px;
+    height: 5.7%;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
     display: block;
@@ -72,11 +80,11 @@ ul {
 }
 
 .nav-bar-aside-list > li a {
-    margin-top: 20px;
+    margin-top: 10%;
     display: inline-block;
     position: absolute;
     font-size: 12px;
-    left: 70px;
+    left: 35%;
     color: #333;
 }
 
@@ -85,7 +93,7 @@ ul {
     height: 30px;
     display: inline-block;
     margin-top: 10px;
-    left: 20px;
+    left: 10%;
     position: absolute;
 }
 
@@ -106,12 +114,11 @@ ul {
 }
 
 .main {
-    height: 900px;
-    width: 1670px;
-    position: absolute;
-    left: 220px;
+    height: 86.3%;
+    width: 87%;
     padding-left: 20px;
     display: none;
+    float: right;
 }
 
 section.active {
@@ -119,9 +126,11 @@ section.active {
 }
 
 .main-title {
-    margin: 20px 0 20px;
+    margin: 1.2% 0;
     padding-bottom: 10px;
     border-bottom: 1px solid #e7e7e7;
+    height:4.2%;
+    width:100%;
 }
 
 .main-title > h1 {
@@ -151,6 +160,7 @@ section.active {
     background-color: #f5f5f5;
     border-radius: 10px 10px 0 0;
 }
+
 .main-exhibition-title > p {
     position: absolute;
     margin-top: 14px;
@@ -158,11 +168,10 @@ section.active {
 }
 
 .footer {
-    top: 960px;
+    height: 5.7%;
+        width: 100%;
+        top:94.2%;
     position: absolute;
-    margin-top: 15px;
-    height: 40px;
-    width: 1920px;
     background-color: #f8f8f8;
     text-align: center;
     border: 1px solid #eee;
@@ -185,7 +194,8 @@ section.active {
     float: left;
 }
 
-@media (max-width: 1900px) {
+
+@media (max-width: 1366px) {
     a {
         font-size: 8px;
         line-height: 8px;
@@ -217,6 +227,7 @@ section.active {
 
     .nav-bar-aside {
         width: 142px;
+        height: 0;
     }
 
     .nav-bar-aside-list {
@@ -239,6 +250,7 @@ section.active {
         margin-top: 7px;
         left: 14px;
     }
+
     .aside-profile {
         background: url("../img/aside-logo-min.png") no-repeat 0 0;
     }
@@ -260,6 +272,7 @@ section.active {
         width: 1188px;
         left: 156px;
         padding-left: 14px;
+        position: absolute;
     }
 
     .main-title {
@@ -287,6 +300,7 @@ section.active {
         width: 100%;
         border-radius: 7px 7px 0 0;
     }
+
     .main-exhibition-title > p {
         position: absolute;
         margin-top: 10px;
@@ -294,9 +308,8 @@ section.active {
     }
 
     .footer {
-        top: 683px;
         margin-top: 11px;
-        height: 28px;
+        height: 32px;
         width: 1366px;
     }
 
