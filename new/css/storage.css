@@ -1,0 +1,302 @@
+/*******************   蓝存页面样式  *****************/
+.water-logo {
+    background: url("../img/profile/exhibition-logo.png") no-repeat 0 0;
+}
+
+.pie-logo {
+    background: url("../img/profile/exhibition-logo.png") no-repeat 0 -22px;
+}
+
+@media screen and (min-width:1900px){
+    .main-water{
+        width:914px;
+        height:600px;
+    }
+
+    .storage-water{
+        position: relative;
+    }
+
+    .lc_background{
+        width: 914px;
+        height: 548px;
+    }
+
+    .main-pie{
+        width:702px;
+        hright:600px;
+    }
+}
+
+@media screen and (max-device-width:1900px){
+    .main-water{
+        width:650px;
+        height:500px;
+    }
+
+    .lc_background{
+        width: 650px;
+        height: 390px;
+    }
+
+    .main-pie{
+        width:500px;
+        hright:500px;
+    }
+}
+
+
+.main-water {
+    float: left;
+}
+
+.main-water-content {
+    margin: 0 auto;
+    position: relative;
+}
+
+.water_background{
+    margin:0 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.water-wave{
+    margin: 0 auto;
+    height: 300px;
+    padding: 20px 60px;
+    position: absolute;
+    left: 276px;
+    bottom: 70px;
+    width: 268px;
+    border-radius: 5px;
+}
+
+.main-pie {
+    float: right;
+}
+
+.main-pie-content {
+    margin: 0 auto;
+    position: relative;
+}
+
+.water-circle{
+    position: absolute;
+    background-color: #3cf;
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -o-border-radius:50%;
+    z-index: 5;
+}
+
+.water-circle-xsmall{
+    width:5px;
+    height: 5px;
+}
+
+.water-circle-small{
+    width:7px;
+    height: 7px;
+}
+.water-circle-normal{
+
+    width:10px;
+    height: 10px;
+}
+.water-circle-large{
+    width:12px;
+    height: 12px;
+}
+
+.water-circle-xlarge{
+    width:14px;
+    height: 14px;
+}
+.water-horizontal-far{
+    top:54px;
+    left:278px;
+    -webkit-animation: water-horizontal-far-animation 5s infinite;
+    -o-animation: water-horizontal-far-animation 5s infinite;
+    animation: water-horizontal-far-animation 5s infinite;
+}
+
+.water-horizontal-normal{
+    top:50px;
+    left:336px;
+    -webkit-animation: water-horizontal-normal-animation 5s infinite;
+    -o-animation: water-horizontal-normal-animation 5s infinite;
+    animation: water-horizontal-normal-animation 5s infinite;
+}
+.water-horizontal-near{
+    top:50px;
+    left:394px;
+    -webkit-animation: water-horizontal-near-animation 5s infinite;
+    -o-animation: water-horizontal-near-animation 5s infinite;
+    animation: water-horizontal-near-animation 5s infinite;
+}
+.water-horizontal-right{
+    top:50px;
+    left:452px;
+    -webkit-animation: water-horizontal-right-animation 5s infinite;
+    -o-animation: water-horizontal-right-animation 5s infinite;
+    animation: water-horizontal-right-animation 5s infinite;
+}
+.water-vertical-higher{
+    top:104px;
+    left:452px;
+    -webkit-animation: water-vertical-higher-animation 5s infinite;
+    -o-animation: water-vertical-higher-animation 5s infinite;
+    animation: water-vertical-higher-animation 5s infinite;
+}
+.water-vertical-high{
+    top:154px;
+    left:452px;
+    -webkit-animation: water-vertical-high-animation 5s infinite;
+    -o-animation: water-vertical-high-animation 5s infinite;
+    animation: water-vertical-high-animation 5s infinite;
+}
+.water-vertical-middle-high{
+    top:204px;
+    left:452px;
+    -webkit-animation: water-vertical-middle-high-animation 5s infinite;
+    -o-animation: water-vertical-middle-high-animation 5s infinite;
+    animation: water-vertical-middle-high-animation 5s infinite;
+}
+.water-vertical-middle-low{
+    top:254px;
+    left:452px;
+    -webkit-animation: water-vertical-middle-low-animation 5s infinite;
+    -o-animation: water-vertical-middle-low-animation 5s infinite;
+    animation: water-vertical-middle-low-animation 5s infinite;
+}
+.water-vertical-low{
+    top:304px;
+    left:452px;
+    -webkit-animation: water-vertical-low-animation 5s infinite;
+    -o-animation: water-vertical-low-animation 5s infinite;
+    animation: water-vertical-low-animation 5s infinite;
+}
+.water-vertical-lower{
+    top:354px;
+    left:452px;
+    -webkit-animation: water-vertical-lower-animation 5s infinite;
+    -o-animation: water-vertical-lower-animation 5s infinite;
+    animation: water-vertical-lower-animation 5s infinite;
+}
+.water-vertical-bottom{
+    top:404px;
+    left:452px;
+    -webkit-animation: water-vertical-bottom-animation 5s infinite;
+    -o-animation: water-vertical-bottom-animation 5s infinite;
+    animation: water-vertical-bottom-animation 5s infinite;
+}
+.water-pop-left{
+    top:400px;
+    left:400px;
+}
+.water-pop-near{
+    top:400px;
+    left:440px;
+}
+.water-pop-normal{
+    top:400px;
+    left:480px;
+}
+.water-pop-far{
+    top:400px;
+    left:520px;
+}
+.water-pop-farer{
+    top:400px;
+    left:560px;
+}
+
+@keyframes water-horizontal-far-animation {
+    0%{top:54px;left:278px;visibility: visible;}
+    30%{top:54px;left:452px;visibility: visible;}
+    98.8%{top:454px;left:452px;visibility: hidden;}
+    99.8%{top:54px;left:278px;visibility: hidden;}
+    100%{top:54px;left:278px;visibility: visible;}
+}
+@keyframes water-horizontal-normal-animation {
+    0%{top:50px;left:336px;visibility: visible;}
+    20%{top:50px;left:452px;visibility: visible;}
+    88.8%{top:454px;left:452px;visibility: hidden;}
+    89.8%{top:50px;left:278px;visibility: hidden;}
+    90%{top:50px;left:278px;visibility: visible;}
+    100%{top:50px;left:336px;visibility: visible;}
+}
+@keyframes water-horizontal-near-animation {
+    0%{top:50px;left:394px;visibility: visible;}
+    10%{top:50px;left:452px;visibility: visible;}
+    78.8%{top:454px;left:452px;visibility: hidden;}
+    79.8%{top:50px;left:278px;visibility: hidden;}
+    80%{top:50px;left:278px;visibility: visible;}
+    100%{top:50px;left:394px;visibility: visible;}
+}
+@keyframes water-horizontal-right-animation {
+    0%{top:50px;left:452px;visibility: visible;}
+    68.8%{top:454px;left:452px;visibility: hidden;}
+    69.8%{top:50px;left:278px;visibility: hidden;}
+    70%{top:50px;left:278px;visibility: visible;}
+    100%{top:50px;left:452px;visibility: visible;}
+}
+@keyframes water-vertical-higher-animation {
+    0%{top:104px;left:452px;visibility: visible;}
+    60.2%{top:454px;left:452px;visibility: hidden;}
+    61.2%{top:50px;left:278px;visibility: hidden;}
+    61.4%{top:50px;left:278px;visibility: visible;}
+    91.4%{top:50px;left:452px;visibility: visible;}
+    100%{top:104px;left:452px;visibility: visible;}
+}
+@keyframes water-vertical-high-animation {
+    0%{top:154px;left:452px;visibility: visible;}
+    51.6%{top:454px;left:452px;visibility: hidden;}
+    52.6%{top:50px;left:278px;visibility: hidden;}
+    52.8%{top:50px;left:278px;visibility: visible;}
+    82.8%{top:50px;left:452px;visibility: visible;}
+    100%{top:154px;left:452px;visibility: visible;}
+}
+@keyframes water-vertical-middle-high-animation {
+    0%{top:204px;left:452px;visibility: visible;}
+    43%{top:454px;left:452px;visibility: hidden;}
+    44%{top:50px;left:278px;visibility: hidden;}
+    44.2%{top:50px;left:278px;visibility: visible;}
+    74.2%{top:50px;left:452px;visibility: visible;}
+    100%{top:204px;left:452px;visibility: visible;}
+}
+@keyframes water-vertical-middle-low-animation {
+    0%{top:254px;left:452px;visibility: visible;}
+    34.4%{top:454px;left:452px;visibility: hidden;}
+    35.4%{top:50px;left:278px;visibility: hidden;}
+    35.6%{top:50px;left:278px;visibility: visible;}
+    65.6%{top:50px;left:452px;visibility: visible;}
+    100%{top:254px;left:452px;visibility: visible;}
+}
+@keyframes water-vertical-low-animation {
+    0%{top:304px;left:452px;visibility: visible;}
+    25.8%{top:454px;left:452px;visibility: hidden;}
+    26.8%{top:50px;left:278px;visibility: hidden;}
+    27%{top:50px;left:278px;visibility: visible;}
+    57%{top:50px;left:452px;visibility: visible;}
+    100%{top:304px;left:452px;visibility: visible;}
+}
+@keyframes water-vertical-lower-animation {
+    0%{top:354px;left:452px;visibility: visible;}
+    17.2%{top:454px;left:452px;visibility: hidden;}
+    18.2%{top:50px;left:278px;visibility: hidden;}
+    18.4%{top:50px;left:278px;visibility: visible;}
+    48.4%{top:50px;left:452px;visibility: visible;}
+    100%{top:354px;left:452px;visibility: visible;}
+}
+@keyframes water-vertical-bottom-animation {
+    0%{top:404px;left:452px;visibility: visible;}
+    8.6%{top:454px;left:452px;visibility: hidden;}
+    9.6%{top:50px;left:278px;visibility: hidden;}
+    9.8%{top:50px;left:278px;visibility: visible;}
+    39.8%{top:50px;left:452px;visibility: visible;}
+    100%{top:404px;left:452px;visibility: visible;}
+}

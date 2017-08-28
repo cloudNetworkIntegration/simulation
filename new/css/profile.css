@@ -1,3 +1,4 @@
+/*
 .main-architecture {
     width: 1100px;
     height: 820px;
@@ -80,6 +81,156 @@
     margin: 20px 0 0 20px;
     width: 530px;
     height: 206px;
+}
+
+.main-characteristic-content {
+    position: absolute;
+    margin: 0 30px;
+}
+
+.main-characteristic-content > h3 {
+    font-size: 20px;
+    line-height: 3.4;
+}
+
+.main-characteristic-content > p {
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.characteristic-more {
+    right: 30px;
+    position: absolute;
+    bottom: 16px;
+    color: #288fcf;
+}*/
+/*******************   概览页面样式  *****************/
+.architecture-logo {
+    background: url("../img/profile/exhibition-logo.png") no-repeat 0 0;
+}
+
+.introduction-logo {
+    background: url("../img/profile/exhibition-logo.png") no-repeat 0 -22px;
+}
+
+.characteristic-logo {
+    background: url("../img/profile/exhibition-logo.png") no-repeat 0 -44px;
+}
+
+@media screen and (min-width:1900px){
+    .main-architecture{
+        width: 1100px;
+        height: 752px;
+    }
+
+    .bgtu {
+        width: 1032px;
+        height: 714px;
+    }
+
+    .bghover {
+        width: 1032px;
+        height: 714px;
+    }
+
+    .main-introduction {
+        width: 530px;
+        height: 390px;
+    }
+
+    .main-characteristic {
+        width: 530px;
+        height: 206px;
+    }
+}
+
+@media screen and (max-device-width: 1900px){
+    .main-architecture{
+        width: 700px;
+        height: 658px;
+    }
+
+    .bgtu {
+        width: 645px;
+        height: 459px;
+    }
+
+    .bghover {
+        width: 645px;
+        height: 459px;
+    }
+
+    .main-introduction {
+        width: 450px;
+        height: 420px;
+    }
+
+    .main-characteristic {
+        width: 450px;
+        height: 216px;
+    }
+
+}
+
+.main-architecture {
+    float: left;
+}
+
+.main-architecture-content {
+    margin: 0 auto;
+    position: relative;
+}
+
+.bgtu {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+.bghover {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+.hover {
+    display: block;
+}
+
+.main-introduction {
+    margin-left: 20px;
+    float: right;
+}
+
+.main-introduction-content {
+    position: absolute;
+    margin: 0 30px;
+}
+
+.main-introduction-content > h3 {
+    font-size: 20px;
+    line-height: 3.6;
+}
+
+.main-introduction-content > p {
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+    text-indent: 24px;
+}
+
+.main-characteristic {
+    float: right;
+    margin: 20px 0 0 20px;
 }
 
 .main-characteristic-content {
