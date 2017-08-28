@@ -118,62 +118,9 @@
     background: url("../img/profile/exhibition-logo.png") no-repeat 0 -44px;
 }
 
-@media screen and (min-width:1900px){
-    .main-architecture{
-        width: 1100px;
-        height: 752px;
-    }
-
-    .bgtu {
-        width: 1032px;
-        height: 714px;
-    }
-
-    .bghover {
-        width: 1032px;
-        height: 714px;
-    }
-
-    .main-introduction {
-        width: 530px;
-        height: 390px;
-    }
-
-    .main-characteristic {
-        width: 530px;
-        height: 206px;
-    }
-}
-
-@media screen and (max-device-width: 1900px){
-    .main-architecture{
-        width: 700px;
-        height: 658px;
-    }
-
-    .bgtu {
-        width: 645px;
-        height: 459px;
-    }
-
-    .bghover {
-        width: 645px;
-        height: 459px;
-    }
-
-    .main-introduction {
-        width: 450px;
-        height: 420px;
-    }
-
-    .main-characteristic {
-        width: 450px;
-        height: 216px;
-    }
-
-}
-
 .main-architecture {
+    width: 68%;
+    height: 86%;
     float: left;
 }
 
@@ -183,6 +130,8 @@
 }
 
 .bgtu {
+    width: 1032px;
+    height: 714px;
     position: absolute;
     display: block;
     left: 0;
@@ -193,6 +142,8 @@
 }
 
 .bghover {
+    width: 1032px;
+    height: 714px;
     position: absolute;
     display: none;
     left: 0;
@@ -207,8 +158,10 @@
 }
 
 .main-introduction {
-    margin-left: 20px;
+    width: 28%;
+    height: 45%;
     float: right;
+    margin: 0 20px;
 }
 
 .main-introduction-content {
@@ -229,8 +182,10 @@
 }
 
 .main-characteristic {
+    width: 28%;
+    height: 24%;
     float: right;
-    margin: 20px 0 0 20px;
+    margin: 20px 20px;
 }
 
 .main-characteristic-content {
@@ -255,3 +210,45 @@
     bottom: 16px;
     color: #288fcf;
 }
+
+@media screen and (max-width: 1900px){
+    .main-architecture{
+        width: 650px;
+        height: 472px;
+    }
+
+    .bgtu {
+        width: 645px;
+        height: 459px;
+    }
+
+    .bghover {
+        width: 645px;
+        height: 459px;
+    }
+
+    .main-introduction {
+        width: 510px;
+        height: 310px;
+        margin: 0 5px;
+        margin: 0 5px;
+    }
+
+    .main-characteristic {
+        width: 510px;
+        height: 150px;
+        margin: 10px 5px 0 5px;
+    }
+    /*change introduce - font*/
+
+    .main-introduction-content > h3 {
+        font-size: 16px;
+        line-height: 2.0;
+    }
+
+    .main-characteristic-content > h3 {
+        font-size: 16px;
+        line-height: 2.0;
+    }
+}
+
