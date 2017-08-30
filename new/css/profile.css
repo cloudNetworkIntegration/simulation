@@ -120,8 +120,9 @@
 
 .main-architecture {
     width: 68%;
-    height: 86%;
+    height: 80%;
     float: left;
+    min-height:746px;
 }
 
 .main-architecture-content {
@@ -162,6 +163,7 @@
     height: 45%;
     float: right;
     margin: 0 20px;
+    min-height:420px;
 }
 
 .main-introduction-content {
@@ -186,6 +188,7 @@
     height: 24%;
     float: right;
     margin: 20px 20px;
+    min-height:224px;
 }
 
 .main-characteristic-content {
@@ -212,9 +215,21 @@
 }
 
 @media screen and (max-width: 1900px){
+    .architecture-logo {
+        background: url("../img/profile/exhibition-logo-small.png") no-repeat 0 0;
+    }
+
+    .introduction-logo {
+        background: url("../img/profile/exhibition-logo-small.png") no-repeat 0 -16px;
+    }
+
+    .characteristic-logo {
+        background: url("../img/profile/exhibition-logo-small.png") no-repeat 0 -32px;
+    }
     .main-architecture{
         width: 650px;
         height: 472px;
+        min-height:472px;
     }
 
     .bgtu {
@@ -231,13 +246,14 @@
         width: 510px;
         height: 310px;
         margin: 0 5px;
-        margin: 0 5px;
+        min-height:310px;
     }
 
     .main-characteristic {
         width: 510px;
         height: 150px;
         margin: 10px 5px 0 5px;
+        min-height:150px;
     }
     /*change introduce - font*/
 
