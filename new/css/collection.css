@@ -1,7 +1,9 @@
 
 .main-monitor {
-    width: 810px;
-    height: 820px;
+    width: 49%;
+    height: 88.8%;
+    max-width: 810px;
+    max-height: 820px;
     background: url("../img/collection/monitorBG.png") no-repeat 0 0;
     position: relative;
     float: left;
@@ -23,9 +25,11 @@
 }
 
 .main-monitor-content {
-    width: 760px;
-    height: 650px;
-    margin: 25px 25px 0;
+    max-width: 760px;
+    max-height: 650px;
+    width: 92%;
+    height: 89%;
+    margin: 4% 4% 0;
 }
 
 .monitor-content-title {
@@ -43,15 +47,19 @@
 }
 
 .main-monitor-video {
-    width: 760px;
-    height: 570px;
+    max-width: 760px;
+    max-height: 570px;
+    width: 100%;
+    height: 80%;
     background-color: gray;
-    margin-top: 68px;
+    margin-top: 10%;
 }
 
 .main-wifi {
-    width: 810px;
-    height: 820px;
+    width: 49%;
+    height: 88.8%;
+    max-width: 810px;
+    max-height: 820px;
     background: url("../img/collection/WIFI_BG.png") no-repeat 0 0;
     position: relative;
     float: right;
@@ -73,9 +81,11 @@
 }
 
 .main-wifi-content {
-    width: 760px;
-    height: 650px;
-    margin: 25px 25px 0;
+    max-width: 760px;
+    max-height: 650px;
+    width: 92%;
+    height: 89%;
+    margin: 4% 4% 0;
 }
 
 .wifi-content-title {
@@ -108,7 +118,10 @@
     width: 100%;
     height: 50px;
     text-align: center;
+    font-size: 16px;
+    color: rgb(102, 102, 102);
 }
+
 @media (max-width: 1366px) {
     .main-monitor {
         width: 576px;
@@ -156,14 +169,5 @@
 
     .wifi-content-title {
         height: 10px;
-    }
-
-    .main-wifi-data {
-        margin: 57px auto 0;
-        width: 334px;
-        height: 178px;
-    }
-    #wifi-data > li {
-        height: 35px;
     }
 }
