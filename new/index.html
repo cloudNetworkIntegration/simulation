@@ -53,7 +53,8 @@
             <map name="MapLarge" id="MapLarge" class="map-large">
                 <area class="hov" shape="poly" coords="86.4,205.2,312.96,73.44,406.56,138.96,179.76,270.24"
                       href="javascript:"/>
-                <area class="hov" shape="poly" coords="609.6,149.04,609.6,130.56,673.2,94.08,841.92,213.6,841.92,230.64,785.04,270"
+                <area class="hov" shape="poly"
+                      coords="609.6,149.04,609.6,130.56,673.2,94.08,841.92,213.6,841.92,230.64,785.04,270"
                       href="javascript:"/>
                 <area class="hov" shape="poly" coords="227.76,247.92,379.68,159.36,415.92,186.72,264.24,278.64"
                       href="javascript:"/>
@@ -61,7 +62,8 @@
             <map name="MapSmall" id="MapSmall" class="map-small">
                 <area class="hov" shape="poly" coords="54,128.25,195.6,45.9,254.1,86.85,112.35,168.9"
                       href="javascript:"/>
-                <area class="hov" shape="poly" coords="381,93.15,381,81.6,420.75,58.8,526.2,133.5,526.2,144.15,490.65,168.75"
+                <area class="hov" shape="poly"
+                      coords="381,93.15,381,81.6,420.75,58.8,526.2,133.5,526.2,144.15,490.65,168.75"
                       href="javascript:"/>
                 <area class="hov" shape="poly" coords="142.35,154.95,237.3,99.6,259.95,116.7,165.15,174.15"
                       href="javascript:"/>
@@ -113,6 +115,21 @@
                 <p>FRAME PROCESSD：889172</p>
             </div>
             <div class="main-monitor-video">
+                <object name='StrobeMediaPlayback' type='application/x-shockwave-flash'>
+                    <param name='movie'
+                           value='http://ctbigdata.com:8081/smarteyes/static/swfs/StrobeMediaPlayback.swf'/>
+                    <param name='quality' value='high'/>
+                    <param name='bgcolor' value='#000000'/>
+                    <param name='allowfullscreen' value='true'/>
+                    <param name='flashvars'
+                           value='&src=rtmp://124.127.117.171/live/stream123&autoHideControlBar=true&streamType=live&autoPlay=true&verbose=true'/>
+                    <embed src='http://ctbigdata.com:8081/smarteyes/static/swfs/StrobeMediaPlayback.swf' quality='high'
+                           bgcolor='#000000' name='StrobeMediaPlayback' allowfullscreen='true'
+                           pluginspage='http://www.adobe.com/go/getflashplayer'
+                           flashvars='&src=rtmp://124.127.117.171/live/stream123&autoHideControlBar=true&streamType=live&autoPlay=true&verbose=true'
+                           type='application/x-shockwave-flash'></embed>
+                </object>
+
             </div>
         </div>
     </section>
@@ -194,5 +211,6 @@
 <script src="js/jquery/jquery-ui.js"></script>
 <script src="js/profile.js"></script>
 <script src="js/storage.js"></script>
+<script src="js/collection.js"></script>
 </body>
 </html>
