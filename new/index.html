@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/collection.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/storage.css">
 </head>
 <body>
 <nav class="nav-bar">
@@ -41,17 +42,29 @@
             <p>整体架构示意图</p>
         </div>
         <div class="main-architecture-content">
-            <img class="bgtu" src="img/profile/TB1aHVjLpXXXXbbXFXXXXXXXXXX-1626-1428.jpg" usemap="#Map" border="0"/>
-            <img class="bghover" src="img/profile/TB1dDhXLpXXXXacaXXXXXXXXXXX-1626-1428.png" usemap="#Map" border="0"/>
-            <img class="bghover" src="img/profile/TB1klNiLpXXXXXjXVXXXXXXXXXX-1626-1428.png" usemap="#Map" border="0"/>
-            <img class="bghover" src="img/profile/TB1VkU.LXXXXXa7aXXXXXXXXXXX-1626-1428.png" usemap="#Map" border="0"/>
-            <map name="Map" id="Map">
-                <area class="hov" shape="poly" coords="530,639,586,673,772,560,772,526,715,491,531,601"
-                      href="javascript:"/>
-                <area class="hov" shape="poly" coords="314,679,726,433,726,325,429,147,27,386,28,510"
-                      href="javascript:"/>
-                <area class="hov" shape="poly" coords="353,140,353,105,298,72,39,224,38,271,85,299"
-                      href="javascript:"/>
+            <img class="bgtu" src="img/profile/platform.png" usemap="#MapSmall"
+                 border="0"/>
+            <img class="bghover" src="img/profile/lancun_highlight.png" usemap="#MapSmall"
+                 border="0"/>
+            <img class="bghover" src="img/profile/datasource_highlight.png" usemap="#MapSmall"
+                 border="0"/>
+            <img class="bghover" src="img/profile/daho_highlight.png" usemap="#MapSmall"
+                 border="0"/>
+            <map name="MapLarge" id="MapLarge" class="map-large">
+                <area class="hov" shape="poly" coords="86.4,205.2,312.96,73.44,406.56,138.96,179.76,270.24"
+                      href="javascript:;"/>
+                <area class="hov" shape="poly" coords="609.6,149.04,609.6,130.56,673.2,94.08,841.92,213.6,841.92,230.64,785.04,270"
+                      href="javascript:;"/>
+                <area class="hov" shape="poly" coords="227.76,247.92,379.68,159.36,415.92,186.72,264.24,278.64"
+                      href="javascript:;"/>
+            </map>
+            <map name="MapSmall" id="MapSmall" class="map-small">
+                <area class="hov" shape="poly" coords="54,128.25,195.6,45.9,254.1,86.85,112.35,168.9"
+                      href="javascript:;"/>
+                <area class="hov" shape="poly" coords="381,93.15,381,81.6,420.75,58.8,526.2,133.5,526.2,144.15,490.65,168.75"
+                      href="javascript:;"/>
+                <area class="hov" shape="poly" coords="142.35,154.95,237.3,99.6,259.95,116.7,165.15,174.15"
+                      href="javascript:;"/>
             </map>
         </div>
     </section>
@@ -78,9 +91,8 @@
         </div>
         <article class="main-characteristic-content">
             <h3>数据采集端</h3>
-            <p>- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。
-            </p>
-            <p>- 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。
+            <p>- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。<br/>
+                - 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。
             </p>
         </article>
         <a class="characteristic-more" href="#">了解更多>></a>
@@ -121,8 +133,56 @@
         </div>
     </section>
 </section>
-<section id="storage" class="main"><p>storage</p></section>
-<section id="network" class="main"><p>network</p></section>
+<section id="storage" class="main">
+    <div class="main-title">
+        <h1>蓝存</h1>
+    </div>
+    <section class="panel main-water">
+        <div class="main-exhibition-title">
+            <span class="main-logo water-logo"></span>
+            <p>蓝存系统状态</p>
+        </div>
+        <div class="main-water-content">
+            <div class="storage-water">
+                <img src="img/storage/bg1.png" class="water_background">
+                <canvas class="water-wave"></canvas>
+                <div class="water-circle water-circle-small water-horizontal-far">
+                </div>
+                <div class="water-circle water-circle-normal water-horizontal-normal">
+                </div>
+                <div class="water-circle water-circle-small water-horizontal-near">
+                </div>
+                <div class="water-circle water-circle-xlarge water-horizontal-right">
+                </div>
+                <div class="water-circle water-circle-large water-vertical-higher">
+                </div>
+                <div class="water-circle water-circle-normal water-vertical-high">
+                </div>
+                <div class="water-circle water-circle-xlarge water-vertical-middle-high">
+                </div>
+                <div class="water-circle water-circle-normal water-vertical-middle-low">
+                </div>
+                <div class="water-circle water-circle-xsmall water-vertical-low">
+                </div>
+                <div class="water-circle water-circle-normal water-vertical-lower">
+                </div>
+                <div class="water-circle water-circle-normal water-vertical-bottom">
+                </div>
+                <div class="water-circle water-circle-large water-pop-left">
+                </div>
+                <div class="water-circle water-circle-small water-pop-near">
+                </div>
+                <div class="water-circle water-circle-xsmall water-pop-normal">
+                </div>
+                <div class="water-circle water-circle-normal water-pop-far">
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<section id="network" class="main">
+
+</section>
 <footer class="footer">
     <img src="img/footer.png" alt="中国电信" class="footer-logo">
     <div class="footer-title">

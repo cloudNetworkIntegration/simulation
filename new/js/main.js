@@ -1,12 +1,49 @@
 $(function () {
     $('#pageSelect').tabify({num: 0});
-    $('#Map .hov').each(function (item) {
+
+    /*********************************profile模块******************************/
+        //显示的文字
+    var Info = [{
+            title:'蓝存',
+            message:'- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。<br/>\n' +
+            '- 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。<br/>'
+        },{
+            title:'数据采集端',
+            message:'- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。<br/>\n' +
+            '- 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。<br/>',
+        },{
+            title:'云网融合',
+            message:'- 采用数字摄像头获取得到的视频流数据，将进行实时切片和内容分析。<br/>\n' +
+            '- 警用WiFi探针将提供大功率电子身份标识采集能力，无缝捕捉环境中的电子身份标识。<br/>'
+        }]
+
+    //窗口大小发生改变
+    $(window).resize(function(){
+        var doc_width = document.body.clientWidth;
+        if(doc_width>1900){
+            $('.bgtu').attr('usemap','#MapLarge');
+            $('.bghover').each(function(){$(this).attr('usemap','#MapLarge');})
+        }
+        else{
+            $('.bgtu').attr('usemap','#MapSmall')
+            $('.bghover').each(function(){$(this).attr('usemap','#MapSmall');})
+        }
+    });
+
+    $('.hov').each(function(item){
+        var index = item%3;
         //鼠标放上，显示图片
-        $(this).mouseover(function () {
-            $('.bghover').each(function () {
+        $(this).mouseover(function(){
+            $('.bghover').each(function(){
                 $(this).removeClass('hover');
             });
-            $('.bghover' + ':eq(' + item + ')').addClass('hover');
+            $('.bghover'+':eq('+index+')').addClass('hover');
+        });
+
+        //鼠标点击，更换右侧文字
+        $(this).click(function(){
+            $('.main-characteristic-content h3').html(Info[index].title);
+            $('.main-characteristic-content p').html(Info[index].message);
         });
     });
 
@@ -121,4 +158,56 @@ $.fn.fontScroll = function (options) {//WIFI探针滚动方法
         removeStyle();//移除所有列表的类
         setStyle();//给当前中间项以及前后2项设置类
     }
+
+    /*********************************storage模块******************************/
+    var canvas = $("canvas");
+    var ctx = canvas[0].getContext('2d');
+    var startTime = Date.now();
+    var time = 2000;
+    var clockwise = 1;
+    var cp1x, cp1y, cp2x, cp2y;
+
+    requestAnimationFrame(function waveDraw() {
+        var t = Math.min(1.0, (Date.now() - startTime) / time);
+
+        if(clockwise) {
+            cp1x = 121 + (74 * t);
+            cp1y = 28 + (72 * t);
+            cp2x = 123 - (69 * t);
+            cp2y = 179 - (79 * t);
+        } else {
+            cp1x = 195 - (74 * t);
+            cp1y = 100 - (72 * t);
+            cp2x = 54 + (69 * t);
+            cp2y = 100 + (79 * t);
+        }
+
+        ctx.clearRect(0, 0, 270, 200);
+        ctx.beginPath();
+        ctx.moveTo(0, 100);
+        // 绘制三次贝塞尔曲线
+        ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, 270, 100);
+        // 绘制矩形
+        ctx.rect(0, 100, 270,200);
+        ctx.fillStyle = '#bae3f9';
+        ctx.fill();
+        ctx.save();
+
+        if( t == 1 ) {
+            startTime = Date.now();
+            clockwise = !clockwise;
+        }
+
+        //水滴的运动效果
+        var small = $('.water-circle-small');
+        function moveLeft(elemt){
+            var initLeft = elemt.offsetLeft;
+            //      alert(initLeft);
+        }
+
+        moveLeft(small);
+
+        requestAnimationFrame(waveDraw);
+    });
+
 };
