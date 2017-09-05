@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/collection.css">
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/storage.css">
+    <link rel="stylesheet" href="css/network.css">
 </head>
 <body>
 <nav class="nav-bar">
@@ -198,7 +199,77 @@
     </section>
 </section>
 <section id="network" class="main">
-
+    <div class="main-title">
+        <h1>云网融合</h1>
+    </div>
+    <section class="panel main-network">
+        <div class="main-exhibition-title">
+            <span class="main-logo network-logo"></span>
+            <p>云网融合运行状态</p>
+        </div>
+        <div id="networkContent" class="main-network-content">
+            <div id="networkChart" class="main-network-chart"></div>
+        </div>
+    </section>
+    <section class="panel main-network-characteristic">
+        <div class="main-exhibition-title">
+            <span class="main-logo network-characteristic-logo"></span>
+            <p>模块特性</p>
+        </div>
+        <article class="network-characteristic-content">
+            <h3>云网融合</h3>
+            <p>
+                -建设私有云、公有云两级存储，实现轻量热数据的OLAP级查询展现，以及海量温冷数据的长期备份存储。<br>
+                -借助随选网络能力，实现夜间业务低峰期的视频数据备份传输，并支持离线的历史视频数据查询任务。
+            </p>
+        </article>
+    </section>
+    <section class="panel main-network-operation">
+        <div class="main-exhibition-title">
+            <span class="main-logo network-operation-logo"></span>
+            <p>操作区</p>
+        </div>
+        <div class="network-operation-content">
+            <div class="operation-mode">
+                <div class="mode-title">
+                    <p>当前：日间模式</p>
+                </div>
+                <div class="mode-button">
+                    <button>切换至夜间模式</button>
+                </div>
+            </div>
+            <div class="operation-query">
+                <div class="query-title">
+                    <p>离线查询</p>
+                </div>
+                <div class="query-button">
+                    <button>启动离线查询</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="panel main-network-service">
+        <div class="main-exhibition-title">
+            <span class="main-logo network-service-logo"></span>
+            <p>服务状态</p>
+        </div>
+        <div class="network-service-content">
+            <table class="service-table">
+                <tr class="service-table-head">
+                    <th><p>服务名称</p></th>
+                    <th><p>当前状态</p></th>
+                    <th><p>最近24小时状态</p></th>
+                </tr>
+                <tr class="service-table-content">
+                    <td><p>猎犬</p></td>
+                    <td><span class="state-normal"></span>
+                        <p>正常</p></td>
+                    <td><span class="state-normal"></span>
+                        <p>正常</p></td>
+                </tr>
+            </table>
+        </div>
+    </section>
 </section>
 <footer class="footer">
     <img src="img/footer.png" alt="中国电信" class="footer-logo">
@@ -209,8 +280,10 @@
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/jquery/jquery.tabify.js"></script>
 <script src="js/jquery/jquery-ui.js"></script>
+<script src="js/echarts/echarts.min.js"></script>
 <script src="js/profile.js"></script>
 <script src="js/storage.js"></script>
 <script src="js/collection.js"></script>
+<script src="js/network.js"></script>
 </body>
 </html>
