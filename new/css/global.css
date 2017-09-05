@@ -206,6 +206,10 @@ section.active {
         line-height: 10px;
     }
 
+    .nav-bar {
+        height: 42px;
+    }
+
     .nav-bar-header {
         width: 1366px;
     }
