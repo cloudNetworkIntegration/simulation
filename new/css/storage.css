@@ -1,10 +1,6 @@
 /*******************   蓝存页面样式  *****************/
 .water-logo {
-    background: url("../img/profile/exhibition-logo.png") no-repeat 0 0;
-}
-
-.pie-logo {
-    background: url("../img/profile/exhibition-logo.png") no-repeat 0 -22px;
+    background: url("../img/storage/storage-logo.png") no-repeat 0 0;
 }
 
 .main-water{
@@ -306,7 +302,159 @@
     100%{top:388px;left:640px;visibility: visible;}
 }
 
+.main-lancun-characteristic {
+    width: 700px;
+    height: 24%;
+    float: right;
+    margin: 0 20px;
+    min-height:244px;
+}
+
+.lancun-characteristic-logo {
+    background: url("../img/storage/storage-logo.png") no-repeat 0 -22px;
+}
+
+.main-lancun-characteristic-content {
+    position: absolute;
+    margin: 0 30px;
+}
+
+.main-lancun-characteristic-content > h3 {
+    font-size: 20px;
+    line-height: 3.4;
+}
+
+.main-lancun-characteristic-content > p {
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.main-state-characteristic {
+    width: 700px;
+    height: 24%;
+    float: right;
+    margin: 20px 20px;
+    min-height:244px;
+}
+
+.state-characteristic-logo {
+    background: url("../img/storage/storage-logo.png") no-repeat 0 -44px;
+}
+
+.main-state-characteristic-content {
+    position: absolute;
+    margin: 0 30px;
+}
+
+.main-state-characteristic-content > h3 {
+    font-size: 20px;
+    line-height: 3.4;
+}
+
+.main-state-characteristic-content > p {
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.state-characteristic-head{
+    background: inherit;
+    background-color: rgba(245, 245, 245, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(231, 231, 231, 1);
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 630px;
+    height: 40px;
+}
+
+.state-characteristic-head span{
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    height: 20px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.state-characteristic-head span:nth-child(1){
+    left: 10px;
+}
+
+.state-characteristic-head span:nth-child(2){
+    left: 260px;
+}
+
+.state-characteristic-head span:nth-child(3){
+    left: 510px;
+}
+
+.state-characteristic-col{
+    position: absolute;
+    left: 10px;
+    width: 620px;
+    height: 40px;
+    border-bottom: 1px solid rgba(204, 204, 204, 1);
+}
+
+.state-characteristic-col:nth-child(1){
+    top: 50px;
+}
+
+.state-characteristic-col:nth-child(2){
+    top: 100px;
+}
+
+.state-characteristic-col:nth-child(3){
+    top: 150px;
+}
+
+.state-characteristic-col span{
+    position: absolute;
+    top:0;
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.state-characteristic-col span:nth-child(1){
+    left:10px;
+}
+
+.state-characteristic-col span:nth-child(2){
+    background: url(../img/storage/right-small.png) no-repeat 0 0;
+    left:260px;
+    color: #5BD56A;
+    text-indent: 24px;
+}
+
+.state-characteristic-col span:nth-child(3){
+    background: url(../img/storage/right-small.png) no-repeat 0 0;
+    left:510px;
+    color: #5BD56A;
+    text-indent: 24px;
+}
+
+
 @media screen and (max-device-width:1900px){
+
+    .water-logo {
+        background: url("../img/storage/storage-logo-small.png") no-repeat 0 0;
+    }
+
     .main-water{
         width:650px;
         height:500px;
@@ -322,11 +470,6 @@
         left: 179px;
         bottom: 46px;
         width: 190px;
-    }
-
-    .main-pie{
-        width:500px;
-        height:500px;
     }
 
     .water-circle-xsmall{
@@ -577,5 +720,152 @@
         25.1%{top:276px;left:370px;visibility: hidden;}
         100%{top:276px;left:455px;visibility: hidden;}
     }
+
+    .main-lancun-characteristic {
+        width: 510px;
+        height: 24%;
+        float: right;
+        margin: 0 5px;
+        min-height:220px;
+    }
+
+    .lancun-characteristic-logo {
+        background: url("../img/storage/storage-logo-small.png") no-repeat 0 -16px;
+    }
+
+    .main-lancun-characteristic-content {
+        position: absolute;
+        margin: 0 30px;
+    }
+
+    .main-lancun-characteristic-content > h3 {
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    .main-lancun-characteristic-content > p {
+        display: block;
+        font-size: 12px;
+        line-height: 2;
+    }
+
+    .main-state-characteristic {
+        width: 510px;
+        height: 24%;
+        float: right;
+        margin: 10px 5px 0 5px;
+        min-height:244px;
+    }
+
+    .state-characteristic-logo {
+        background: url("../img/storage/storage-logo-small.png") no-repeat 0 -32px;
+    }
+
+    .main-state-characteristic-content {
+        position: absolute;
+        margin: 0 30px;
+    }
+
+    .main-state-characteristic-content > h3 {
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    .main-state-characteristic-content > p {
+        display: block;
+        font-size: 12px;
+        line-height: 2;
+    }
+
+    .state-characteristic-head{
+        background: inherit;
+        background-color: rgba(245, 245, 245, 1);
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(231, 231, 231, 1);
+        border-radius: 5px;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 450px;
+        height: 40px;
+    }
+
+    .state-characteristic-head span{
+        position: absolute;
+        top: 10px;
+        width: 200px;
+        height: 20px;
+        font-family: '微软雅黑 Regular', '微软雅黑';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+    }
+
+    .state-characteristic-head span:nth-child(1){
+        left: 10px;
+    }
+
+    .state-characteristic-head span:nth-child(2){
+        left: 170px;
+    }
+
+    .state-characteristic-head span:nth-child(3){
+        left: 330px;
+    }
+
+    .state-characteristic-col{
+        position: absolute;
+        left: 10px;
+        width: 450px;
+        height: 40px;
+        border-bottom: 1px solid rgba(204, 204, 204, 1);
+    }
+
+    .state-characteristic-col:nth-child(1){
+        top: 50px;
+    }
+
+    .state-characteristic-col:nth-child(2){
+        top: 100px;
+    }
+
+    .state-characteristic-col:nth-child(3){
+        top: 150px;
+    }
+
+    .state-characteristic-col span{
+        position: absolute;
+        top:0;
+        font-family: '微软雅黑 Bold', '微软雅黑';
+        font-weight: 700;
+        font-style: normal;
+        font-size: 14px;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .state-characteristic-col span:nth-child(1){
+        left:10px;
+    }
+
+    .state-characteristic-col span:nth-child(2){
+        background: url(../img/storage/right-small.png) no-repeat 0 0;
+        left:170px;
+        color: #5BD56A;
+        text-indent: 24px;
+    }
+
+    .state-characteristic-col span:nth-child(3){
+        background: url(../img/storage/right-small.png) no-repeat 0 0;
+        left:320px;
+        color: #5BD56A;
+        text-indent: 24px;
+    }
+
 
 }
