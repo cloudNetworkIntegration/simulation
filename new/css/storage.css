@@ -448,6 +448,37 @@
     text-indent: 24px;
 }
 
+.storage-water span{
+    position: absolute;
+    top:0;
+    display: block;
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    width:200px;
+    height: 200px;
+}
+
+#read_speed{
+    left: 170px;
+    top: 70px;
+    font-size: 14px;
+}
+
+#write_speed{
+    left: 600px;
+    top: 410px;
+    font-size: 14px;
+}
+
+#proportion{
+    left: 360px;
+    top: 390px;
+    font-size: 40px;
+    color: white;
+}
+
 
 @media screen and (max-device-width:1900px){
 
@@ -867,5 +898,35 @@
         text-indent: 24px;
     }
 
+    .storage-water span{
+        position: absolute;
+        top:0;
+        display: block;
+        font-family: '微软雅黑 Bold', '微软雅黑';
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+        width:200px;
+        height: 200px;
+    }
+
+    #read_speed{
+        left:80px;
+        top:50px;
+        font-size: 14px;
+    }
+
+    #write_speed{
+        left: 410px;
+        top: 290px;
+        font-size: 14px;
+    }
+
+    #proportion{
+        left: 230px;
+        top: 270px;
+        font-size: 30px;
+        color: white;
+    }
 
 }

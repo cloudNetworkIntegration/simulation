@@ -38,4 +38,22 @@ $(function(){
         }
         requestAnimationFrame(waveDraw);
     });
+
+    function ajaxInfo() {
+        $.ajax({
+            type:'get',
+            url:'http://180.153.45.27:8081/CloudNetPlatform/getUsedData',
+            datatype: 'jsonp',
+            jsonp:'jsonpCallback',
+            success:function (data) {
+                $('#read_speed').innerHTML=data.read;
+                $('#write_speed').innerHTML=data.write;
+                $('#proportion').innerHTML=data.used;
+            }
+        })
+
+    }
+
+    setInterval(ajaxInfo,10000);
+    ajaxInfo();
 });
