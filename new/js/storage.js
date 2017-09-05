@@ -42,13 +42,16 @@ $(function(){
     function ajaxInfo() {
         $.ajax({
             type:'get',
+            async:false,
             url:'http://180.153.45.27:8081/CloudNetPlatform/getUsedData',
-            datatype: 'jsonp',
-            jsonp:'jsonpCallback',
+            dataType: 'jsonp',
             success:function (data) {
+                var data ={"read":18.4,"write":38.1,"total":40,"used":27.6}
+                console.log(data);
+                /*var data = JSON.parse(data);
                 $('#read_speed').innerHTML=data.read;
                 $('#write_speed').innerHTML=data.write;
-                $('#proportion').innerHTML=data.used;
+                $('#proportion').innerHTML=data.used;*/
             }
         })
 
