@@ -26,10 +26,28 @@ $(function () {
     var data1Value = [];
     var data2Time = [];
     var data2Value = [];
+    var bandWidth = [];
     var time = getTime(3600000);
     getFlow();
     var chartBox = document.getElementById('networkChart');
     var networkContent = document.getElementById('networkContent');
+
+    function getBand() {
+        $.ajax({
+            url: 'data/getBand.php',
+            dataType: 'text',
+            success: function (response) {
+                var band = response / 1000;
+                for (var i = 0; i < data1Time.length; i++) {
+                    bandWidth[i] = band;
+                }
+                myChart.setOption(option);
+            },
+            error: function () {
+                console.error('带宽获取失败');
+            }
+        });
+    }
 
     function getFlow() {
         $.ajax({
@@ -54,9 +72,16 @@ $(function () {
                 });
             },
             error: function () {
-                console.error('流量获取异常');
+                console.error('流量获取失败');
             }
         });
+        $.ajax({
+            url: 'data/changeCondition.php',
+            data: {
+                adjust: 'day'
+            }
+        });
+        getBand();
     }
 
     setInterval(function () {
@@ -93,7 +118,7 @@ $(function () {
         grid: {
             left: '3%',
             right: '4%',
-            bottom: '3%',
+            bottom: '6%',
             containLabel: true
         },
         xAxis: {
@@ -102,7 +127,8 @@ $(function () {
             nameGap: 25,
             nameLocation: 'middle',
             nameTextStyle: {
-                fontSize: 18
+                fontSize: 16,
+                padding: [0, 0, 100, 0]
             },
             boundaryGap: false,
             data: data1Time,
@@ -117,7 +143,8 @@ $(function () {
             name: '流量/带宽(Mbps)',
             boundaryGap: [0, '100%'],
             nameTextStyle: {
-                fontSize: 18
+                fontSize: 16,
+                padding: [0, 0, 0, 50]
             },
             splitLine: {
                 show: false
@@ -194,6 +221,37 @@ $(function () {
                     }
                 },
                 data: data2Value
+            },
+            {
+                name: '带宽',
+                type: 'line',
+                smooth: true,
+                symbol: 'none',
+                sampling: 'average',
+                lineStyle: {
+                    normal: {
+                        color: '#449FAD'
+                    }
+                },
+                label: {
+                    normal: {
+                        color: '#449FAD',
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#449FAD'
+                    }
+                },
+                areaStyle: {
+                    normal: {
+                        color: '#449FAD',
+                        opacity: '0.5'
+                    }
+                },
+                data: bandWidth
             }
         ]
     };
@@ -244,6 +302,7 @@ $(function () {
                 alert("失败");
             }
         });
+        getBand();
     }
 
     $('#modeButton').click(function () {

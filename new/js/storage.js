@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
     var canvas = $(".water-wave");
     var ctx = canvas[0].getContext('2d');
     var startTime = Date.now();
@@ -9,7 +9,7 @@ $(function(){
     requestAnimationFrame(function waveDraw() {
         var t = Math.min(1.0, (Date.now() - startTime) / time);
 
-        if(clockwise) {
+        if (clockwise) {
             cp1x = 121 + (74 * t);
             cp1y = 28 + (72 * t);
             cp2x = 123 - (69 * t);
@@ -27,12 +27,12 @@ $(function(){
         // 绘制三次贝塞尔曲线
         ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, 270, 100);
         // 绘制矩形
-        ctx.rect(0, 100, 270,200);
+        ctx.rect(0, 100, 270, 200);
         ctx.fillStyle = '#bae3f9';
         ctx.fill();
         ctx.save();
 
-        if( t == 1 ) {
+        if (t === 1) {
             startTime = Date.now();
             clockwise = !clockwise;
         }
@@ -41,22 +41,20 @@ $(function(){
 
     function ajaxInfo() {
         $.ajax({
-            type:'get',
-            async:false,
-            url:'http://180.153.45.27:8081/CloudNetPlatform/getUsedData',
-            dataType: 'jsonp',
-            success:function (data) {
-                var data ={"read":18.4,"write":38.1,"total":40,"used":27.6}
-                console.log(data);
-                /*var data = JSON.parse(data);
-                $('#read_speed').innerHTML=data.read;
-                $('#write_speed').innerHTML=data.write;
-                $('#proportion').innerHTML=data.used;*/
+            type: 'get',
+            url: 'data/storageData.php',
+            dataType: 'json',
+            success: function (data) {
+                $('#read_speed').html(data.read + 'M/s');
+                $('#write_speed').html(data.write + 'M/s');
+                $('#proportion').html(Math.round(data.used * 100 / data.total) + '%');
+                $('.water-wave').css('height', 2.7 * 270 * data.used / data.total - 35 + 'px');
             }
         })
 
     }
 
-    setInterval(ajaxInfo,10000);
     ajaxInfo();
+    setInterval(ajaxInfo, 10000);
+
 });
