@@ -726,7 +726,7 @@
     position: absolute;
     left: 0;
     top: 10px;
-    width: 630px;
+    width: 540px;
     height: 40px;
 }
 
@@ -746,17 +746,17 @@
 }
 
 .state-characteristic-head span:nth-child(2) {
-    left: 260px;
+    left: 215px;
 }
 
 .state-characteristic-head span:nth-child(3) {
-    left: 510px;
+    left: 430px;
 }
 
 .state-characteristic-col {
     position: absolute;
     left: 10px;
-    width: 620px;
+    width: 540px;
     height: 40px;
     border-bottom: 1px solid rgba(204, 204, 204, 1);
 }
@@ -790,14 +790,14 @@
 
 .state-characteristic-col span:nth-child(2) {
     background: url(../img/storage/right-small.png) no-repeat 0 0;
-    left: 260px;
+    left: 215px;
     color: #5BD56A;
     text-indent: 24px;
 }
 
 .state-characteristic-col span:nth-child(3) {
     background: url(../img/storage/right-small.png) no-repeat 0 0;
-    left: 510px;
+    left: 430px;
     color: #5BD56A;
     text-indent: 24px;
 }
