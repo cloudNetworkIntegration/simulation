@@ -833,7 +833,7 @@
     color: white;
 }
 
-@media screen and (max-device-width: 1900px) {
+@media screen and (max-width: 1900px) {
 
     .water-logo {
         background: url("../img/storage/storage-logo-small.png") no-repeat 0 0;
@@ -852,7 +852,7 @@
     .water-wave {
         height: 200px;
         left: 179px;
-        bottom: 46px;
+        bottom: 35px;
         width: 190px;
     }
 
