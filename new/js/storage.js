@@ -48,7 +48,12 @@ $(function () {
                 $('#read_speed').html(data.read + 'M/s');
                 $('#write_speed').html(data.write + 'M/s');
                 $('#proportion').html(Math.round(data.used * 100 / data.total) + '%');
-                $('.water-wave').css('height', 2.7 * 270 * data.used / data.total - 35 + 'px');
+                var width = document.body.clientWidth;
+                if (width >= 1900) {
+                    $('.water-wave').css('height', 2.7 * 270 * data.used / data.total - 35 + 'px');
+                } else {
+                    $('.water-wave').css('height', 2.5 * 200 * data.used / data.total - 30 + 'px');
+                }
             }
         })
 
