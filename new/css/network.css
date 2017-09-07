@@ -160,6 +160,32 @@
     position: relative;
     top: 6px;
 }
-.state-normal~p{
+
+.state-normal ~ p {
     color: #5bd56a;
+}
+
+@media (max-width: 1366px) {
+    .network-logo {
+        background-size: 16px;
+    }
+
+    .network-characteristic-logo {
+        background-size: 16px;
+        background-position: 0 -16px;
+    }
+
+    .network-operation-logo {
+        background-size: 16px;
+        background-position: 0 -32px;
+    }
+
+    .network-service-logo {
+        background-size: 16px;
+        background-position: 0 -48px;
+    }
+
+    .main-network-characteristic {
+        height: 30%;
+    }
 }
