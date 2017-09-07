@@ -113,7 +113,9 @@ $(function () {
         },
         legend: {
             width: chartBox.style.width,
-            height: chartBox.style.height
+            height: chartBox.style.height,
+            data: ['上行流量', '下行流量', '带宽'],
+            x: 'right'
         },
         grid: {
             left: '3%',
@@ -141,7 +143,8 @@ $(function () {
             /*min: 0,
             max: 1000,*/
             name: '流量/带宽(Mbps)',
-            boundaryGap: [0, '100%'],
+            boundaryGap: [0, '50%'],
+            minInterval: 5,
             nameTextStyle: {
                 fontSize: 16,
                 padding: [0, 0, 0, 50]
@@ -161,7 +164,7 @@ $(function () {
         }],
         series: [
             {
-                name: '上行',
+                name: '上行流量',
                 type: 'line',
                 smooth: true,
                 symbol: 'none',
@@ -192,7 +195,7 @@ $(function () {
                 data: data1Value
             },
             {
-                name: '下行',
+                name: '下行流量',
                 type: 'line',
                 smooth: true,
                 symbol: 'none',
@@ -230,24 +233,24 @@ $(function () {
                 sampling: 'average',
                 lineStyle: {
                     normal: {
-                        color: '#449FAD'
+                        color: '#F6AB00'
                     }
                 },
                 label: {
                     normal: {
-                        color: '#449FAD',
+                        color: '#F6AB00',
                         show: true,
                         position: 'top'
                     }
                 },
                 itemStyle: {
                     normal: {
-                        color: '#449FAD'
+                        color: '#F6AB00'
                     }
                 },
                 areaStyle: {
                     normal: {
-                        color: '#449FAD',
+                        color: '#F6AB00',
                         opacity: '0.5'
                     }
                 },
