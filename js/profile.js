@@ -37,7 +37,6 @@ $(function () {
 
     $('.hov').each(function (item) {
         var index = item % 3;
-        var hrefArr = ['collection', 'storage', 'network'];
         //鼠标放上，显示图片
         $(this).mouseover(function () {
             $('.bghover').each(function () {
