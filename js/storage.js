@@ -42,7 +42,8 @@ $(function () {
     function ajaxInfo() {
         $.ajax({
             type: 'get',
-            url: 'data/storageData.php',
+            //url: 'data/storageData.php',
+            url: 'http://124.127.117.39:8081/CloudNetPlatform/getUsedData',
             dataType: 'json',
             success: function (data) {
                 $('#read_speed').html(data.read + 'M/s');
