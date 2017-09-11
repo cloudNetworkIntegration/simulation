@@ -9,7 +9,7 @@ function previousDate(now, time) {//dateStr格式为yyyy-mm-dd hh:mm:ss
     var result = {
         year: parseInt(ndt.getFullYear()),
         month: parseInt(ndt.getMonth() + 1),
-        date: parseInt(ndt.getDate()-1),
+        date: parseInt(ndt.getDate()),
         h: parseInt(ndt.getHours()),
         m: parseInt(ndt.getMinutes()),
         s: parseInt(ndt.getSeconds())
@@ -22,7 +22,7 @@ function getNowFormatDate() {
     var t = {
         year: myDate.getFullYear(),
         month: myDate.getMonth() + 1,
-        date: myDate.getDate()-1,
+        date: myDate.getDate(),
         h: myDate.getHours(),
         m: myDate.getMinutes() - 10,
         s: myDate.getSeconds()
@@ -70,9 +70,16 @@ $(function () {
         });
     };
 
+    var index = 10;
+
     function moveUp() {
         $elements.animate({
             top: '-=' + lineHeight + 'px'
+        }, function () {
+            $elements.children().eq(0).remove();
+            $elements.append('<li>' + wifiData[index] + '</li>');
+            $elements.css('top', '0px');
+            index++;
         });
         $('div').fontChange();
     }
@@ -86,7 +93,6 @@ $(function () {
 
     function startScroll() {
         flag = true;
-        styleInit();
         lineHeight = $elements.children().eq(0).height();
         var time = setInterval(moveUp, 2000);
         $elements.hover(function () {//鼠标移至探针数据上停止轮播
@@ -104,13 +110,14 @@ $(function () {
         };
     }
 
+    var wifiData = [];
     setInterval(function () {
         var time = getNowFormatDate();
         var pre = time.pre;
         var now = time.now;
         $.ajax({//获取WIFI探针数据
             //url: 'data/wifiData.php',
-            url:'http://124.127.117.39:80/simulation/data/wifiData.php',
+            url: 'http://124.127.117.39:80/simulation/data/wifiData.php',
             dataType: 'json',
             data: {
                 mac: "62:68:75:AA:11:05",
@@ -121,17 +128,22 @@ $(function () {
                 var data = result.WIFI;
                 var num = result.number;
                 for (var i = 0; i < data.length; i++) {//将data每一项的内容添加到列表中
-                    $("#wifi-data").append("<li>" + data[i].data + "</li>");
+                    wifiData.push(data[i].data);
                 }
                 $('.wifi-content-title').find('p').eq(-1).html("U-ID DETECTTED：" + num);
                 if (!flag) {
+                    for (i = 0; i < Math.min(wifiData.length, 10); i++) {
+                        $elements.append('<li>' + wifiData[i] + '</li>');
+                    }
+                    styleInit();
                     startScroll();
                 }
             },
             error: function () {
                 var data = 'No data';
+                $elements.empty();
                 for (var i = 0; i < 5; i++) {//将data每一项的内容添加到列表中
-                    $("#wifi-data").append("<li>" + data + "</li>");
+                    $elements.append("<li>" + data + "</li>");
                 }
                 $('.wifi-content-title').find('p').eq(-1).html("U-ID DETECTTED：NULL");
                 styleInit();
