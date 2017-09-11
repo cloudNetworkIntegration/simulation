@@ -9,7 +9,7 @@ function previousDate(now, time) {//dateStr格式为yyyy-mm-dd hh:mm:ss
     var result = {
         year: parseInt(ndt.getFullYear()),
         month: parseInt(ndt.getMonth() + 1),
-        date: parseInt(ndt.getDate()),
+        date: parseInt(ndt.getDate()-1),
         h: parseInt(ndt.getHours()),
         m: parseInt(ndt.getMinutes()),
         s: parseInt(ndt.getSeconds())
@@ -22,7 +22,7 @@ function getNowFormatDate() {
     var t = {
         year: myDate.getFullYear(),
         month: myDate.getMonth() + 1,
-        date: myDate.getDate(),
+        date: myDate.getDate()-1,
         h: myDate.getHours(),
         m: myDate.getMinutes() - 10,
         s: myDate.getSeconds()
@@ -109,7 +109,8 @@ $(function () {
         var pre = time.pre;
         var now = time.now;
         $.ajax({//获取WIFI探针数据
-            url: 'data/wifiData.php',
+            //url: 'data/wifiData.php',
+            url:'http://124.127.117.39:80/simulation/data/wifiData.php',
             dataType: 'json',
             data: {
                 mac: "62:68:75:AA:11:05",
