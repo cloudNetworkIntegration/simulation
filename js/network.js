@@ -18,6 +18,16 @@ function getTime(delay) {
     }
 }
 
+function setNight() {
+    $('#modeButton').html('切换至日间模式');
+    $('#modeTitle').html('当前：夜间模式');
+}
+
+function setDay() {
+    $('#modeButton').html('切换至夜间模式');
+    $('#modeTitle').html('当前：日间模式');
+}
+
 $(function () {
     /**
      * 云网融合数据获取以及echarts的配置
@@ -32,26 +42,11 @@ $(function () {
     var chartBox = document.getElementById('networkChart');
     var networkContent = document.getElementById('networkContent');
 
-    function getBand() {
-        $.ajax({
-            url: 'data/getBand.php',
-            dataType: 'text',
-            success: function (response) {
-                var band = response / 1000;
-                for (var i = 0; i < data1Time.length; i++) {
-                    bandWidth[i] = band;
-                }
-                myChart.setOption(option);
-            },
-            error: function () {
-                console.error('带宽获取失败');
-            }
-        });
-    }
 
     function getFlow() {
         $.ajax({
-            url: 'data/stateData.php',
+            //url: 'data/stateData.php',
+            url: 'http://124.127.117.39:8081/CloudNetPlatform/getStatusData',
             dataType: 'json',
             data: {
                 StartTime: time.pre,
@@ -76,12 +71,43 @@ $(function () {
             }
         });
         $.ajax({
-            url: 'data/changeCondition.php',
-            data: {
-                adjust: 'day'
+            //url: 'data/changeCondition.php',
+            url: 'http://124.127.117.39:8081/CloudNetPlatform/getBandwidth',
+            success: function (response) {
+                if (response == 30000) {
+                    setNight();
+                } else if (response == 10000) {
+                    $('#modeButton').addClass('day');
+                    setDay();
+                } else {
+                    console.error("带宽有误");
+                }
+                getBand();
+            },
+            error: function () {
+                console.error("带宽获取失败");
             }
         });
-        getBand();
+
+    }
+
+    function getBand() {
+        $.ajax({
+            //url: 'data/getBand.php',
+            url: 'http://124.127.117.39:8081/CloudNetPlatform/getBandwidth',
+            dataType: 'text',
+            success: function (response) {
+                var band = response / 1000;
+                console.log(band);
+                for (var i = 0; i < data1Time.length; i++) {
+                    bandWidth[i] = band;
+                }
+                myChart.setOption(option);
+            },
+            error: function () {
+                console.error('带宽获取失败');
+            }
+        });
     }
 
     setInterval(function () {
@@ -280,7 +306,8 @@ $(function () {
      * */
     function changeCondition(condition) {
         $.ajax({
-            url: 'data/changeCondition.php',
+            //url: 'data/changeCondition.php',
+            url: 'http://124.127.117.39:8081/CloudNetPlatform/changeBandwith',
             dataType: 'text',
             data: {
                 adjust: condition
@@ -288,13 +315,12 @@ $(function () {
             success: function (response) {
                 if (response === 'success') {
                     console.log('切换' + condition + '成功');
-                    if (condition === 'night') {
-                        $('#modeButton').html('切换至日间模式').toggleClass('day');
-                        $('#modeTitle').html('当前：夜间模式');
-                    } else if (condition === 'day') {
-                        $('#modeButton').html('切换至夜间模式').toggleClass('day');
-                        $('#modeTitle').html('当前：日间模式');
+                    if (condition === 'day') {
+                        setDay();
+                    } else if (condition === 'night') {
+                        setNight();
                     }
+                    getBand();
                 } else {
                     console.error('切换' + condition + '失败');
                     alert("切换" + condition + "错误，请检查服务器！");
@@ -305,7 +331,7 @@ $(function () {
                 alert("失败");
             }
         });
-        getBand();
+
     }
 
     $('#modeButton').click(function () {
@@ -314,6 +340,10 @@ $(function () {
         } else {
             changeCondition('day')
         }
-
+        $(this).toggleClass('day');
     });
+    $('#queryNight').click(function () {
+        changeCondition('night');
+        $('#modeButton').removeClass('day');
+    })
 });
