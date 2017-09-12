@@ -166,10 +166,9 @@ $(function () {
         },
         yAxis: {
             type: 'value',
-            /*min: 0,
-            max: 1000,*/
+            min: 0,
+            max: 40,
             name: '流量/带宽(Mbps)',
-            boundaryGap: [0, '50%'],
             minInterval: 5,
             nameTextStyle: {
                 fontSize: 16,
