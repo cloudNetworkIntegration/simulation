@@ -79,6 +79,7 @@ $(function () {
             $elements.children().eq(0).remove();
             $elements.append('<li>' + wifiData[index] + '</li>');
             $elements.css('top', '0px');
+            styleInit();
             index++;
         });
         $('div').fontChange();
