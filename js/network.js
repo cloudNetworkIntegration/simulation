@@ -338,13 +338,12 @@ $(function () {
                     getBand();
                 } else {
                     console.error('切换' + condition + '失败');
-                    alert("切换" + condition + "错误，请检查服务器！");
+                    toastr.error("切换" + condition + "错误，请检查服务器！");
                 }
             },
             error: function () {
                 toastr.error("状态切换失败");
                 console.error("状态切换失败");
-                alert("失败");
             }
         });
     }
