@@ -41,7 +41,21 @@ $(function () {
     getFlow();
     var chartBox = document.getElementById('networkChart');
     var networkContent = document.getElementById('networkContent');
-
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-right",
+        "onclick": "",
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
 
     function getFlow() {
         $.ajax({
@@ -315,8 +329,10 @@ $(function () {
                 if (response === 'success') {
                     console.log('切换' + condition + '成功');
                     if (condition === 'day') {
+                        toastr.success('切换日间模式成功');
                         setDay();
                     } else if (condition === 'night') {
+                        toastr.success('切换夜间模式成功');
                         setNight();
                     }
                     getBand();
@@ -326,11 +342,11 @@ $(function () {
                 }
             },
             error: function () {
+                toastr.error("状态切换失败");
                 console.error("状态切换失败");
                 alert("失败");
             }
         });
-
     }
 
     $('#modeButton').click(function () {
@@ -343,6 +359,7 @@ $(function () {
     });
     $('#queryNight').click(function () {
         changeCondition('night');
+        toastr.info("已启动离线查询");
         $('#modeButton').removeClass('day');
     })
 });
