@@ -55,6 +55,12 @@ $(function () {
                 } else {
                     $('.water-wave').css('height', 2.5 * 200 * data.used / data.total - 30 + 'px');
                 }
+            },
+            error: function () {
+                $('#read_speed').html(' - M/s');
+                $('#write_speed').html(' - M/s');
+                $('#proportion').html(' 0 %');
+                $('.water-wave').css('height', 0);
             }
         })
 
